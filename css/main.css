@@ -1,0 +1,283 @@
+/* Main Styles */
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-size: var(--fontSize-body-14px);
+    line-height: var(--lineHeight-normal-1-6);
+}
+
+/* Navbar - transparent over the hero, glassmorphic once scrolled. No
+   auto-hide: the navbar always stays put, only its background/text
+   color transition based on scroll position. */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    z-index: var(--z-fixed-300);
+    transition: background 0.5s ease, backdrop-filter 0.5s ease,
+                border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-sm-2px-8px);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .navbar.scrolled {
+        background: var(--background);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-24px);
+}
+
+.navbar-logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 100%;
+    width: auto;
+    transition: filter 0.5s ease;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: var(--space-32px);
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-menu a {
+    color: var(--foreground);
+    font-weight: 500;
+    transition: color var(--transition-base-250ms);
+}
+
+.navbar-menu a:hover {
+    color: var(--primary);
+}
+
+.navbar-menu a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: var(--space-4px);
+}
+
+/* Transparent state (top of page, over the hero photo): logo and links
+   flip to white for contrast. Glassmorphic state (.scrolled) uses the
+   default dark-on-light colors above. */
+.navbar:not(.scrolled) .navbar-logo img {
+    filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+}
+
+.navbar:not(.scrolled) .navbar-menu a {
+    color: var(--color-white-ffffff);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.navbar:not(.scrolled) .navbar-menu a:hover {
+    color: var(--primary-subtle);
+}
+
+.navbar:not(.scrolled) .navbar-menu a.active {
+    color: var(--color-white-ffffff);
+    border-bottom-color: var(--color-white-ffffff);
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+}
+
+/* Footer */
+.footer {
+    background: var(--color-neutral-800-27272a);
+    color: var(--color-white-ffffff);
+    padding: var(--space-64px) 0 var(--space-24px);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-32px);
+    margin-bottom: var(--space-48px);
+}
+
+.footer-section h4 {
+    color: var(--color-white-ffffff);
+    margin-bottom: var(--space-16px);
+}
+
+.footer-section p, .footer-section a {
+    font-size: var(--fontSize-sm-13px);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: var(--lineHeight-relaxed-1-8);
+}
+
+.footer-section a {
+    display: block;
+    margin-bottom: var(--space-8px);
+    transition: color var(--transition-base-250ms);
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--space-24px);
+    text-align: center;
+    font-size: var(--fontSize-sm-13px);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom p + p {
+    margin-top: var(--space-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-content {
+        padding: 0 var(--space-16px);
+    }
+
+    .navbar-menu {
+        gap: var(--space-16px);
+    }
+
+    .navbar-menu a {
+        font-size: var(--fontSize-sm-13px);
+    }
+
+    h1 {
+        font-size: var(--fontSize-heading3-33px);
+    }
+
+    h2 {
+        font-size: var(--fontSize-lg-20px);
+    }
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-dark {
+    color: var(--foreground);
+}
+
+.text-light {
+    color: var(--muted-foreground);
+}
+
+.text-disabled {
+    color: var(--disabled-foreground);
+}
+
+.text-error {
+    color: var(--error);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.bg-primary {
+    background: var(--primary);
+    color: var(--color-white-ffffff);
+}
+
+.bg-light {
+    background: var(--muted-bg);
+}
+
+.bg-dark {
+    background: var(--color-neutral-800-27272a);
+    color: var(--color-white-ffffff);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.max-w-full {
+    max-width: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

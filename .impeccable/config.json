@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-21T16:25:46.629Z",
+        "reason": "verified false positive: .text-light and dark-bg utility classes exist in CSS but are never combined together in markup"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-21T16:30:42.914Z",
+        "reason": "user asked only to change heading font (Host Grotesk); body font Inter left intentionally"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-21T16:30:49.434Z",
+        "reason": "hero eyebrow is a short 3-word label (Engineering, Automation, Fabrication), not a long passage - standard uppercase eyebrow pattern, not the failure mode this rule targets"
+      }
+    ]
+  }
+}

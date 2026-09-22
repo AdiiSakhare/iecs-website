@@ -1,0 +1,164 @@
+/* Design Tokens & Variables - Named with actual values */
+/* Color scales follow styleguide reference (50-950 shade system) */
+
+:root {
+    /* ============================================
+       BASE
+    ============================================ */
+    --color-black-000000: #000000;
+    --color-white-ffffff: #ffffff;
+
+    /* ============================================
+       PRIMARY (Brand Blue/Indigo - per updated client styleguide)
+    ============================================ */
+    --color-primary-50-eff6ff: #eff6ff;
+    --color-primary-100-dbeafe: #dbeafe;
+    --color-primary-200-bedbff: #bedbff;
+    --color-primary-300-8ec5ff: #8ec5ff;
+    --color-primary-400-51a2ff: #51a2ff;
+    --color-primary-500-2b7fff: #2b7fff;
+    --color-primary-600-155dfc: #155dfc;
+    --color-primary-700-1447e6: #1447e6;
+    --color-primary-800-193cb8: #193cb8;
+    --color-primary-900-1c398e: #1c398e;
+    --color-primary-950-162456: #162456;
+
+    /* ============================================
+       NEUTRAL (Grays)
+    ============================================ */
+    --color-neutral-50-fafafa: #fafafa;
+    --color-neutral-100-f4f4f5: #f4f4f5;
+    --color-neutral-200-e4e4e7: #e4e4e7;
+    --color-neutral-300-d4d4d8: #d4d4d8;
+    --color-neutral-400-9f9fa9: #9f9fa9;
+    --color-neutral-500-71717b: #71717b;
+    --color-neutral-600-52525c: #52525c;
+    --color-neutral-700-3f3f46: #3f3f46;
+    --color-neutral-800-27272a: #27272a;
+    --color-neutral-900-18181b: #18181b;
+    --color-neutral-950-09090b: #09090b;
+
+    /* ============================================
+       RED (Error states)
+    ============================================ */
+    --color-red-50-fef2f2: #fef2f2;
+    --color-red-100-ffe2e2: #ffe2e2;
+    --color-red-200-ffc9c9: #ffc9c9;
+    --color-red-300-ffa2a2: #ffa2a2;
+    --color-red-400-ff6467: #ff6467;
+    --color-red-500-fb2c36: #fb2c36;
+    --color-red-600-e7000b: #e7000b;
+    --color-red-700-c10007: #c10007;
+    --color-red-800-9f0712: #9f0712;
+    --color-red-900-82181a: #82181a;
+    --color-red-950-460809: #460809;
+
+    /* ============================================
+       GREEN (Success states)
+    ============================================ */
+    --color-green-50-f0fdf4: #f0fdf4;
+    --color-green-100-dcfce7: #dcfce7;
+    --color-green-200-b9f8cf: #b9f8cf;
+    --color-green-300-7bf1a8: #7bf1a8;
+    --color-green-400-05df72: #05df72;
+    --color-green-500-00c951: #00c951;
+    --color-green-600-00a63e: #00a63e;
+    --color-green-700-008236: #008236;
+    --color-green-800-016630: #016630;
+    --color-green-900-0d542b: #0d542b;
+    --color-green-950-032e15: #032e15;
+
+    /* ============================================
+       ORANGE (Warning states - distinct from Primary)
+    ============================================ */
+    --color-orange-50-fff7ed: #fff7ed;
+    --color-orange-100-ffedd4: #ffedd4;
+    --color-orange-200-ffd6a8: #ffd6a8;
+    --color-orange-300-ffb86a: #ffb86a;
+    --color-orange-400-ff8904: #ff8904;
+    --color-orange-500-ff6900: #ff6900;
+    --color-orange-600-f54a00: #f54a00;
+    --color-orange-700-ca3500: #ca3500;
+    --color-orange-800-9f2d00: #9f2d00;
+    --color-orange-900-7e2a0c: #7e2a0c;
+    --color-orange-950-441306: #441306;
+
+    /* ============================================
+       SEMANTIC TOKENS (map raw scale -> purpose)
+    ============================================ */
+    --foreground: var(--color-primary-950-162456);
+    --muted-foreground: var(--color-neutral-500-71717b);
+    --disabled-foreground: var(--color-neutral-300-d4d4d8);
+    --border: var(--color-neutral-200-e4e4e7);
+    --background: var(--color-white-ffffff);
+    --muted-bg: var(--color-neutral-50-fafafa);
+
+    --primary: var(--color-primary-500-2b7fff);
+    --primary-hover: var(--color-primary-600-155dfc);
+    --primary-active: var(--color-primary-700-1447e6);
+    --primary-subtle: var(--color-primary-50-eff6ff);
+
+    --error: var(--color-red-500-fb2c36);
+    --success: var(--color-green-500-00c951);
+    --warning: var(--color-orange-500-ff6900);
+
+    /* ============================================
+       SHADOWS - Soft Only
+    ============================================ */
+    --shadow-sm-2px-8px: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md-4px-16px: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg-8px-24px: 0 8px 24px rgba(0, 0, 0, 0.10);
+    --shadow-xl-12px-32px: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+    /* ============================================
+       TYPOGRAPHY - Font Sizes (Golden Ratio 1.618)
+    ============================================ */
+    --fontSize-xs-10px: 0.618rem;
+    --fontSize-sm-13px: 0.786rem;
+    --fontSize-body-14px: 14px;
+    --fontSize-md-16px: 16px;
+    --fontSize-lg-20px: 1.272rem;
+    --fontSize-heading3-33px: 2.058rem;
+    --fontSize-heading2-53px: 3.330rem;
+
+    /* Typography - Line Heights */
+    --lineHeight-tight-1-2: 1.2;
+    --lineHeight-normal-1-6: 1.6;
+    --lineHeight-relaxed-1-8: 1.8;
+
+    /* ============================================
+       SPACING - 8pt Grid (4px allowed as the standard half-step)
+    ============================================ */
+    --space-4px: 4px;
+    --space-8px: 8px;
+    --space-16px: 16px;
+    --space-24px: 24px;
+    --space-32px: 32px;
+    --space-40px: 40px;
+    --space-48px: 48px;
+    --space-64px: 64px;
+    --space-80px: 80px;
+    --space-96px: 96px;
+
+    /* ============================================
+       BORDER RADIUS
+    ============================================ */
+    --radius-button-8px: 8px;
+    --radius-card-12px: 12px;
+    --radius-input-8px: 8px;
+
+    /* ============================================
+       TRANSITIONS - Durations & Easing
+    ============================================ */
+    --transition-fast-150ms: 150ms ease-out;
+    --transition-base-250ms: 250ms ease-out;
+    --transition-slow-350ms: 350ms ease-out;
+
+    /* ============================================
+       Z-INDEX LAYERS
+    ============================================ */
+    --z-dropdown-100: 100;
+    --z-sticky-200: 200;
+    --z-fixed-300: 300;
+    --z-modal-400: 400;
+}

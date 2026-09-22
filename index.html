@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IECS - Industrial Engineering Control Services</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css?v=2">
+    <link rel="stylesheet" href="./css/components.css?v=4">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/main.css?v=8">
+    <link rel="stylesheet" href="./css/sections.css?v=10">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#" class="navbar-logo">
+                <img src="./assets/images/logo/iecs-logo.svg" alt="IECS - Industrial Engineering Control Services">
+            </a>
+
+            <div class="navbar-right">
+                <ul class="navbar-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <button class="navbar-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero hero-image">
+            <img class="hero-bg" src="./assets/images/hero/hero-industrial-automation.jpg" alt="Industrial automation line in operation">
+            <div class="hero-scrim"></div>
+
+            <div class="container hero-content">
+                <span class="hero-eyebrow">Engineering, Automation, Fabrication</span>
+                <h1>Engineering Automation That Keeps Your Production Moving</h1>
+                <p>IECS designs, builds and maintains industrial control systems and factory equipment, engineered for reliability, precision and on-time delivery.</p>
+                <div class="hero-cta-row">
+                    <a href="#services" class="btn btn-primary slide-in-up" style="animation-delay: 0.5s">Explore Our Services</a>
+                    <a href="#contact" class="btn btn-ghost hero-btn-ghost slide-in-up" style="animation-delay: 0.65s">Get In Touch</a>
+                </div>
+
+                <div class="hero-stat-row slide-in-up" style="animation-delay: 0.8s">
+                    <div class="stat-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.6-4.8 2.6.9-5.4-3.9-3.8 5.4-.8z"/></svg>
+                    </div>
+                    <div>
+                        <strong>10+ Years</strong>
+                        <span>Hands-on engineering experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PARTNERS / TRUSTED-BY SCROLLER ============ -->
+        <!-- Placeholder: logos are Logo Ipsum (logoipsum.com) generic placeholder marks, swap for real client logos once provided -->
+        <section class="partners-section">
+            <div class="container">
+                <p class="partners-label fade-in-on-scroll">Trusted by manufacturing &amp; engineering teams</p>
+            </div>
+
+            <div class="carousel-container" id="partner-carousel">
+                <div class="carousel-track">
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-1.svg" alt="Partner logo placeholder 1" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-2.svg" alt="Partner logo placeholder 2" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-3.svg" alt="Partner logo placeholder 3" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-4.svg" alt="Partner logo placeholder 4" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-5.svg" alt="Partner logo placeholder 5" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-6.svg" alt="Partner logo placeholder 6" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-7.svg" alt="Partner logo placeholder 7" loading="lazy"></div>
+                    <div class="partner-logo-item"><img src="./assets/images/partners/logo-8.svg" alt="Partner logo placeholder 8" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="fade-in-on-scroll">What We Do</h2>
+                    <p>End-to-end industrial engineering, from concept to commissioning.</p>
+                </div>
+
+                <div class="grid grid-4">
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 0 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15z"/></svg></div>
+                        <h3>Industrial Automation</h3>
+                        <p>Low-cost to advanced automation solutions engineered around your process.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                        <h3>Control Panel Manufacturing</h3>
+                        <p>LT &amp; HT electrical control panels, wiring and DB solutions built to spec.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <h3>Special Purpose Machines</h3>
+                        <p>Custom machine design, building and assembly for unique production needs.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4V2m6 2V2M9 22v-2m6 2v-2M4 9H2m2 6H2m20-6h-2m2 6h-2"/></svg></div>
+                        <h3>PLC &amp; SCADA Solutions</h3>
+                        <p>Control software design, development and engineering control systems.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="4" height="4"/><rect x="10" y="10" width="4" height="4"/><rect x="18" y="10" width="4" height="4"/><path d="M2 6h20M2 18h20"/></svg></div>
+                        <h3>Assembly Line &amp; Conveyor Setup</h3>
+                        <p>Assembly lines, conveyors and POKA YOKE setups for error-proof production.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3.5v5c0 5-3.4 8.9-8 10.5-4.6-1.6-8-5.5-8-10.5v-5z"/></svg></div>
+                        <h3>Machine Guarding &amp; Safety</h3>
+                        <p>Machinery safety interlocks and guarding built to protect people and process.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 3h6v3H9zM8 12l2.5 2.5L16 9"/></svg></div>
+                        <h3>Testing &amp; EOL Setups</h3>
+                        <p>End-of-line and vision testing systems for consistent quality control.</p>
+                    </div>
+
+                    <div class="card service-card fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <h3>Installation &amp; Maintenance</h3>
+                        <p>Installation, commissioning and annual maintenance for plant equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRODUCTS ============ -->
+        <section id="products" class="section section-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="fade-in-on-scroll">Built For The Factory Floor</h2>
+                    <p>Custom-engineered equipment designed around your process.</p>
+                </div>
+
+                <div class="grid products-grid">
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/vision-testing-system-enclosure.jpeg" alt="Vision Testing System">
+                        <div class="product-caption"><span>Vision Testing System</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/vision-testing-bench-enclosure.jpeg" alt="Vision Testing Bench">
+                        <div class="product-caption"><span>Vision Testing Bench</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/automated-assembly-line-safety-guarding-placeholder.png" alt="Automated assembly line with safety guarding">
+                        <div class="product-caption"><span>Automated Assembly Line</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/inclined-belt-conveyor-placeholder.png" alt="Inclined belt conveyor">
+                        <div class="product-caption"><span>Inclined Belt Conveyor</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/perforated-mesh-machine-safety-enclosure-large-placeholder.png" alt="Perforated mesh machine safety enclosure">
+                        <div class="product-caption"><span>Machine Safety Enclosure</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/tiered-shelf-material-carts-set-placeholder.png" alt="Tiered shelf material transport carts">
+                        <div class="product-caption"><span>Material Transport Carts</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/final-inspection-station-cabinet-placeholder.png" alt="Final inspection station">
+                        <div class="product-caption"><span>Final Inspection Station</span></div>
+                    </div>
+                    <div class="product-card fade-in-on-scroll">
+                        <img src="./assets/images/products/machine-access-platform-steps-placeholder.png" alt="Machine access platform with steps">
+                        <div class="product-caption"><span>Machine Access Platform</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ WHY CHOOSE US ============ -->
+        <section id="why-us" class="why-us-section section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="fade-in-on-scroll">Why Manufacturers Choose IECS</h2>
+                    <p>Engineering-led, not sales-led. Every solution starts with understanding how your line actually runs.</p>
+                </div>
+
+                <div class="why-us-image">
+                    <img src="./assets/images/sections/why-choose-us-factory.jpg" alt="Modern automated production line">
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card why-us-item fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <h3>10+ Years of Hands-On Engineering</h3>
+                        <p>Founded by an electrical engineer with a decade of manufacturing and maintenance experience.</p>
+                    </div>
+                    <div class="card why-us-item fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <h3>Quality &amp; Precision</h3>
+                        <p>Every panel, machine and fixture is built to spec and tested before it reaches your floor.</p>
+                    </div>
+                    <div class="card why-us-item fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <h3>Safety &amp; Ergonomics by Design</h3>
+                        <p>Machinery safety interlocks and ergonomic workstations built in from day one.</p>
+                    </div>
+                    <div class="card why-us-item fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <h3>End-to-End Support</h3>
+                        <p>From design and fabrication to installation and annual maintenance, handled by one team.</p>
+                    </div>
+                    <div class="card why-us-item fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <h3>On-Time Delivery</h3>
+                        <p>Process-driven execution that keeps your production timelines on track.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <!-- PLACEHOLDER CONTACT DETAILS: replace phone/email/address with real client info -->
+        <section id="contact" class="contact-section section section-dark">
+            <div class="container">
+                <div class="contact-section-header">
+                    <h2 class="fade-in-on-scroll">Let's Talk About Your Requirement</h2>
+                    <p>Reach out directly. Our engineering team responds fast.</p>
+                </div>
+
+                <div class="grid contact-grid">
+                    <div class="contact-card">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></div>
+                        <h3>Phone</h3>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M2 6l10 7L22 6M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+                        <h3>Email</h3>
+                        <p>info@iecs.co.in</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                        <h3>Address</h3>
+                        <p>Industrial Area, Pune, Maharashtra, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <img src="./assets/images/logo/iecs-logo.svg" alt="IECS">
+                    <p>Industrial Engineering Control Services, engineering excellence for a better tomorrow.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#products">Products</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#services">Industrial Automation</a>
+                    <a href="#services">Control Panel Manufacturing</a>
+                    <a href="#services">Special Purpose Machines</a>
+                    <a href="#services">PLC &amp; SCADA Solutions</a>
+                    <a href="#services">Installation &amp; Maintenance</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>+91 98765 43210</p>
+                    <p>info@iecs.co.in</p>
+                    <p>Industrial Area, Pune, Maharashtra, India</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 IECS - Industrial Engineering Control Services. All rights reserved.</p>
+                <p>Engineering, Automation, Fabrication - A Better Tomorrow</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="./js/main.js?v=2"></script>
+    <script src="./js/navbar.js?v=5"></script>
+    <script src="./js/animations.js?v=5"></script>
+    <script src="./js/carousel.js?v=2"></script>
+</body>
+</html>
