@@ -48,8 +48,13 @@ function updateActiveNavLink() {
     });
 
     navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        // Links to other pages (about.html, services.html, "index.html#why-us", ...)
+        // are static per-page nav state set in the HTML, not scroll-spied here.
+        if (!href.startsWith('#')) return;
+
         link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
+        if (href.slice(1) === current) {
             link.classList.add('active');
         }
     });
