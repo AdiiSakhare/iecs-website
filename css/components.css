@@ -49,10 +49,12 @@ small {
     align-items: center;
     justify-content: center;
     gap: var(--space-8px);
-    padding: var(--space-16px) var(--space-24px);
-    border-radius: var(--radius-button-8px);
-    font-weight: 600;
-    font-size: var(--fontSize-body-14px);
+    padding: 14px 28px;
+    border-radius: var(--radius-button-12px);
+    font-weight: 500;
+    font-size: var(--fontSize-md-16px);
+    line-height: 20px;
+    letter-spacing: -0.02em;
     transition: all var(--transition-base-250ms);
     cursor: pointer;
 }
@@ -64,7 +66,6 @@ small {
 
 .btn-primary:hover {
     background: var(--primary-hover);
-    box-shadow: var(--shadow-md-4px-16px);
     transform: translateY(-2px);
 }
 
@@ -105,15 +106,15 @@ small {
 /* Cards */
 .card {
     background: var(--background);
+    border: 1px solid var(--border);
     border-radius: var(--radius-card-12px);
     padding: var(--space-24px);
-    box-shadow: var(--shadow-sm-2px-8px);
     transition: all var(--transition-base-250ms);
     text-align: center;
 }
 
 .card:hover {
-    box-shadow: var(--shadow-md-4px-16px);
+    border-color: var(--primary);
     transform: translateY(-4px);
 }
 

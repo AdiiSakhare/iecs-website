@@ -90,12 +90,11 @@
 
 /* Hover Animations */
 .hover-lift {
-    transition: transform var(--transition-base-250ms), box-shadow var(--transition-base-250ms);
+    transition: transform var(--transition-base-250ms);
 }
 
 .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg-8px-24px);
 }
 
 .hover-scale {
@@ -174,7 +173,7 @@ html {
 
 /* Button press animation */
 .btn-press {
-    transition: transform var(--transition-fast-150ms), box-shadow var(--transition-fast-150ms);
+    transition: transform var(--transition-fast-150ms);
 }
 
 .btn-press:active {

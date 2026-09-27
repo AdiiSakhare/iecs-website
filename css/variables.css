@@ -103,14 +103,6 @@
     --warning: var(--color-orange-500-ff6900);
 
     /* ============================================
-       SHADOWS - Soft Only
-    ============================================ */
-    --shadow-sm-2px-8px: 0 2px 8px rgba(0, 0, 0, 0.06);
-    --shadow-md-4px-16px: 0 4px 16px rgba(0, 0, 0, 0.08);
-    --shadow-lg-8px-24px: 0 8px 24px rgba(0, 0, 0, 0.10);
-    --shadow-xl-12px-32px: 0 12px 32px rgba(0, 0, 0, 0.12);
-
-    /* ============================================
        TYPOGRAPHY - Font Sizes (Golden Ratio 1.618)
     ============================================ */
     --fontSize-xs-10px: 0.618rem;
@@ -143,7 +135,7 @@
     /* ============================================
        BORDER RADIUS
     ============================================ */
-    --radius-button-8px: 8px;
+    --radius-button-12px: 12px;
     --radius-card-12px: 12px;
     --radius-input-8px: 8px;
 

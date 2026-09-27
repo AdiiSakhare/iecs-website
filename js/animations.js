@@ -20,34 +20,12 @@ function animateHeroSection() {
         opacity: 0,
         y: 30,
         ease: 'power2.out'
-    }, '-=0.4')
-    .from('.hero-bg', {
-        duration: 1.2,
-        scale: 1.08,
-        ease: 'power2.out'
-    }, 0);
+    }, '-=0.4');
 
     // CTA buttons and stat row use pure-CSS entrance animation (see animations.css),
     // not chained onto the GSAP timeline, so they're never left stuck at opacity:0
     // if the JS ticker stalls (backgrounded/unfocused tab, slow device, etc.) - a
     // permanently invisible primary CTA is worse than a missing fade-in.
-}
-
-// Parallax scroll effect for hero
-function createHeroParallax() {
-    const heroBg = document.querySelector('.hero-bg');
-    if (!heroBg) return;
-
-    gsap.to(heroBg, {
-        y: () => window.innerHeight * 0.2,
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1,
-            markers: false
-        }
-    });
 }
 
 // Hover animations for interactive elements
@@ -143,7 +121,6 @@ function animateGradientBackground() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         animateHeroSection();
-        createHeroParallax();
         initializeHoverAnimations();
         animateCounters();
         animateListItems();

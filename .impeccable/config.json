@@ -26,6 +26,12 @@
         ],
         "createdAt": "2026-09-21T16:30:49.434Z",
         "reason": "hero eyebrow is a short 3-word label (Engineering, Automation, Fabrication), not a long passage - standard uppercase eyebrow pattern, not the failure mode this rule targets"
+      },
+      {
+        "rule": "overused-font",
+        "value": "montserrat",
+        "createdAt": "2026-09-24T04:55:25.365Z",
+        "reason": "user confirmed: user explicitly requested Inter->Montserrat swap for body font"
       }
     ]
   }
