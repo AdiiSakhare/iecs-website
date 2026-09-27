@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - IECS | Industrial Engineering Control Services</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css?v=12">
+    <link rel="stylesheet" href="./css/variables.css?v=12">
+    <link rel="stylesheet" href="./css/components.css?v=12">
+    <link rel="stylesheet" href="./css/animations.css?v=12">
+    <link rel="stylesheet" href="./css/main.css?v=12">
+    <link rel="stylesheet" href="./css/sections.css?v=12">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-logo">
+                <img src="./assets/images/logo/iecs-logo.svg" alt="IECS - Industrial Engineering Control Services">
+            </a>
+
+            <div class="navbar-right">
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#why-us">Why Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+
+                <button class="navbar-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ============ PAGE HEADER ============ -->
+        <section class="page-header">
+            <div class="container">
+                <span class="page-header-eyebrow"><a href="index.html">Home</a> / Contact</span>
+                <h1>Let's Talk About Your Requirement</h1>
+                <p>Reach out directly. Our engineering team responds fast.</p>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT DETAILS ============ -->
+        <!-- PLACEHOLDER CONTACT DETAILS: replace phone/email/address/hours with real client info -->
+        <section class="contact-section section section-dark">
+            <div class="container">
+                <h2 class="sr-only">Reach Us Directly</h2>
+                <div class="grid contact-grid">
+                    <div class="contact-card fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                    </div>
+                    <div class="contact-card fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M2 6l10 7L22 6M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@iecs.co.in">info@iecs.co.in</a></p>
+                    </div>
+                    <div class="contact-card fade-in-on-scroll">
+                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                        <h3>Address</h3>
+                        <p>Industrial Area, Pune, Maharashtra, India</p>
+                    </div>
+                </div>
+
+                <div class="contact-hours fade-in-on-scroll">
+                    <h3>Business Hours</h3>
+                    <div class="contact-hours-row">
+                        <span>Monday - Saturday</span>
+                        <span>9:30 AM - 6:30 PM</span>
+                    </div>
+                    <div class="contact-hours-row">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="section">
+            <div class="container flex-center flex-col" style="text-align:center;">
+                <h2 class="fade-in-on-scroll">Prefer to Talk Through the Details?</h2>
+                <p style="max-width:56ch;margin:var(--space-16px) 0 var(--space-32px);">Call or email us directly - our engineering team can walk through requirements, drawings and timelines with you.</p>
+                <div class="hero-cta-row">
+                    <a href="tel:+919876543210" class="btn btn-primary">Call Us</a>
+                    <a href="mailto:info@iecs.co.in" class="btn btn-secondary">Email Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <img src="./assets/images/logo/iecs-logo.svg" alt="IECS">
+                    <p>Industrial Engineering Control Services, engineering excellence for a better tomorrow.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="products.html">Products</a>
+                    <a href="index.html#why-us">Why Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="services.html">Industrial Automation</a>
+                    <a href="services.html">Control Panel Manufacturing</a>
+                    <a href="services.html">Special Purpose Machines</a>
+                    <a href="services.html">PLC &amp; SCADA Solutions</a>
+                    <a href="services.html">Installation &amp; Maintenance</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                    <p><a href="mailto:info@iecs.co.in">info@iecs.co.in</a></p>
+                    <p>Industrial Area, Pune, Maharashtra, India</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 IECS - Industrial Engineering Control Services. All rights reserved.</p>
+                <p>Engineering, Automation, Fabrication - A Better Tomorrow</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="./js/main.js?v=12"></script>
+    <script src="./js/navbar.js?v=12"></script>
+    <script src="./js/animations.js?v=12"></script>
+    <script src="./js/carousel.js?v=12"></script>
+</body>
+</html>
