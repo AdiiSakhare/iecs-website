@@ -1,0 +1,452 @@
+/* ============================================
+   MOTION LAYER - micro-interactions, hover effects, transitions
+   Loaded last so it can refine the component styles in the earlier files.
+
+   Rules of thumb used here:
+   - Only animate transform / opacity (+ colors); never layout properties.
+   - UI motion stays under ~300ms and uses the custom --ease-out curve.
+   - Pressable things get a :active press (scale .97).
+   - Hover effects are gated behind (hover: hover) so touch devices never
+     get stuck hover states.
+   - Enter slow, exit fast: hover-out is instant-feeling, hover-in is expressive.
+   - Everything movement-based is switched off under prefers-reduced-motion.
+============================================ */
+
+/* ============================================
+   PAGE TRANSITIONS - soft cross-fade between pages (Chrome / Safari 18+,
+   ignored elsewhere). The navbar is its own layer so it stays put.
+============================================ */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: vt-out 140ms var(--ease-out) both;
+}
+
+::view-transition-new(root) {
+    animation: vt-in 260ms var(--ease-out) both;
+}
+
+@keyframes vt-out {
+    to { opacity: 0; }
+}
+
+@keyframes vt-in {
+    from { opacity: 0; }
+}
+
+.navbar {
+    view-transition-name: navbar;
+}
+
+/* ============================================
+   GLOBAL POLISH
+============================================ */
+::selection {
+    background: var(--color-primary-200-bedbff);
+    color: var(--color-primary-950-162456);
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* ============================================
+   SCROLL PROGRESS BAR (element injected by motion.js)
+============================================ */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: calc(var(--z-fixed-300) + 1);
+    background: linear-gradient(90deg, var(--color-primary-400-51a2ff), var(--primary-hover));
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+}
+
+/* ============================================
+   BUTTONS - press feedback + light sweep on hover
+============================================ */
+.btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn:active,
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.28) 50%, transparent 65%);
+    transform: translateX(-120%);
+    pointer-events: none;
+}
+
+/* ============================================
+   NAVBAR - underline that slides in on hover, animated menu toggle
+============================================ */
+@media (min-width: 901px) and (hover: hover) {
+    .navbar-menu a {
+        position: relative;
+    }
+
+    .navbar-menu a:not(.active)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        height: 2px;
+        border-radius: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: transform 260ms var(--ease-out);
+    }
+
+    .navbar-menu a:not(.active):hover::after {
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+
+/* Hamburger -> X */
+.navbar-toggle span {
+    transition: transform 250ms var(--ease-out),
+                opacity 150ms ease-out,
+                background-color 250ms ease-out,
+                box-shadow 250ms ease-out;
+}
+
+.navbar-toggle:active {
+    transform: scale(0.92);
+}
+
+.navbar-right:has(.navbar-menu.active) .navbar-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-right:has(.navbar-menu.active) .navbar-toggle span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0.3);
+}
+
+.navbar-right:has(.navbar-menu.active) .navbar-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu links cascade in after the panel opens; they leave instantly */
+@media (max-width: 900px) {
+    .navbar-menu li {
+        opacity: 0;
+        translate: 0 -8px;
+        transition: opacity 120ms ease-out, translate 120ms ease-out;
+    }
+
+    .navbar-menu.active li {
+        opacity: 1;
+        translate: 0 0;
+        transition: opacity 260ms var(--ease-out), translate 260ms var(--ease-out);
+    }
+
+    .navbar-menu.active li:nth-child(1) { transition-delay: 60ms; }
+    .navbar-menu.active li:nth-child(2) { transition-delay: 95ms; }
+    .navbar-menu.active li:nth-child(3) { transition-delay: 130ms; }
+    .navbar-menu.active li:nth-child(4) { transition-delay: 165ms; }
+    .navbar-menu.active li:nth-child(5) { transition-delay: 200ms; }
+}
+
+/* ============================================
+   HERO - background settles in, then drifts slower than the page (parallax)
+============================================ */
+.hero-bg {
+    animation: hero-settle 2200ms var(--ease-out) both;
+    will-change: translate;
+}
+
+@keyframes hero-settle {
+    from { scale: 1.08; }
+    to   { scale: 1; }
+}
+
+.hero-stat-row strong,
+.about-stat strong {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Inner-page banners: eyebrow, title and copy rise in one after another */
+.page-header .container > * {
+    animation: rise 640ms var(--ease-out) both;
+}
+
+.page-header .container > :nth-child(2) { animation-delay: 80ms; }
+.page-header .container > :nth-child(3) { animation-delay: 160ms; }
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        translate: 0 14px;
+    }
+}
+
+/* ============================================
+   CARDS - lift, icon pop, pointer-following glow
+============================================ */
+.card,
+.contact-card,
+.catalog-section .product-card {
+    position: relative;
+}
+
+.card-icon {
+    transition: transform 300ms var(--ease-out),
+                background-color 250ms ease-out,
+                color 250ms ease-out;
+}
+
+/* Soft glow that tracks the pointer (--mx/--my are set on the card by motion.js) */
+.card::after,
+.contact-card::after,
+.catalog-section .product-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%),
+                rgba(43, 127, 255, 0.10), transparent 70%);
+    transition: opacity 250ms ease-out;
+}
+
+.catalog-section .product-tags li {
+    transition: background-color 250ms ease-out, color 250ms ease-out;
+}
+
+.product-caption span {
+    display: inline-block;
+    transition: transform 250ms var(--ease-out);
+}
+
+.process-num {
+    transition: transform 300ms var(--ease-out);
+}
+
+/* ============================================
+   PRODUCTS - category pills press feedback
+============================================ */
+.catalog-nav-list a:active {
+    transform: scale(0.97);
+}
+
+/* ============================================
+   CTA PANEL - the gradient slowly slides on hover
+============================================ */
+.cta-panel {
+    background-size: 150% 150%;
+    background-position: 0% 0%;
+    transition: background-position 700ms var(--ease-out);
+}
+
+/* ============================================
+   PARTNER LOGOS - quiet by default, full colour on hover
+============================================ */
+.partner-logo-item img {
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: filter 300ms ease-out,
+                opacity 300ms ease-out,
+                transform 300ms var(--ease-out);
+}
+
+/* ============================================
+   FOOTER LINKS - nudge right on hover
+============================================ */
+.footer-section a {
+    transition: color 200ms ease-out, transform 250ms var(--ease-out);
+}
+
+.footer-section p a {
+    transition: color 200ms ease-out;
+}
+
+/* ============================================
+   BACK TO TOP (element injected by motion.js)
+============================================ */
+.to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: var(--z-sticky-200);
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--background);
+    color: var(--primary);
+    box-shadow: 0 6px 16px rgba(22, 36, 86, 0.12);
+    cursor: pointer;
+    opacity: 0;
+    translate: 0 12px;
+    pointer-events: none;
+    transition: opacity 200ms ease-out,
+                translate 300ms var(--ease-out),
+                transform 160ms var(--ease-out),
+                background-color 200ms ease-out,
+                color 200ms ease-out,
+                border-color 200ms ease-out;
+}
+
+.to-top.visible {
+    opacity: 1;
+    translate: 0 0;
+    pointer-events: auto;
+}
+
+.to-top:active {
+    transform: scale(0.92);
+}
+
+.to-top svg {
+    transition: transform 250ms var(--ease-out);
+}
+
+/* ============================================
+   HOVER EFFECTS - mouse/trackpad only
+============================================ */
+@media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover::after {
+        transform: translateX(120%);
+        transition: transform 700ms var(--ease-out);
+    }
+
+    .card:hover,
+    .contact-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--primary);
+        box-shadow: 0 12px 28px rgba(43, 127, 255, 0.10);
+    }
+
+    .card:hover .card-icon,
+    .contact-card:hover .card-icon {
+        transform: scale(1.08) rotate(-4deg);
+    }
+
+    .card:hover::after,
+    .contact-card:hover::after,
+    .catalog-section .product-card:hover::after {
+        opacity: 1;
+    }
+
+    .catalog-section .product-card:hover .product-tags li {
+        background: var(--color-primary-100-dbeafe);
+    }
+
+    .product-card:hover .product-caption span {
+        transform: translateY(-4px);
+    }
+
+    .process-step:hover .process-num {
+        transform: scale(1.1);
+    }
+
+    .cta-panel:hover {
+        background-position: 100% 100%;
+    }
+
+    .partner-logo-item:hover img {
+        filter: none;
+        opacity: 1;
+        transform: scale(1.06);
+    }
+
+    .footer-section a:hover {
+        transform: translateX(4px);
+    }
+
+    .footer-section p a:hover {
+        transform: none;
+    }
+
+    .to-top:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: var(--color-white-ffffff);
+    }
+
+    .to-top:hover svg {
+        transform: translateY(-2px);
+    }
+}
+
+/* ============================================
+   REDUCED MOTION - keep colour/opacity feedback, drop movement
+============================================ */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .fade-in-on-scroll,
+    .slide-in-on-scroll {
+        opacity: 1;
+        translate: none;
+    }
+
+    .fade-in-on-scroll.visible,
+    .slide-in-on-scroll.visible,
+    .hero-bg,
+    .page-header .container > *,
+    .slide-in-up,
+    .fade-in {
+        animation: none;
+    }
+
+    .card:hover,
+    .contact-card:hover,
+    .catalog-section .product-card:hover,
+    .btn-primary:hover,
+    .footer-section a:hover,
+    .card:hover .card-icon,
+    .contact-card:hover .card-icon,
+    .process-step:hover .process-num,
+    .partner-logo-item:hover img,
+    .product-card:hover .product-caption span,
+    .product-card:hover img {
+        transform: none;
+    }
+
+    .btn-primary::after,
+    .card::after,
+    .contact-card::after,
+    .catalog-section .product-card::after {
+        display: none;
+    }
+
+    .navbar-menu li {
+        translate: none;
+    }
+
+    .to-top {
+        translate: none;
+    }
+
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none;
+    }
+}

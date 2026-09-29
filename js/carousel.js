@@ -42,26 +42,33 @@ class Carousel {
     }
 
     animate() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
         let position = 0;
-        const trackWidth = this.track.scrollWidth / 2;
+        let factor = 1; // 0..1 speed multiplier, eased so hover doesn't stop it dead
+        let last = performance.now();
+        let trackWidth = this.track.scrollWidth / 2;
 
-        const step = () => {
-            if (!this.isPaused) {
-                if (this.options.direction === 'left') {
-                    position -= this.options.speed / 60;
-                    if (position <= -trackWidth) {
-                        position = 0;
-                    }
-                } else {
-                    position += this.options.speed / 60;
-                    if (position >= trackWidth) {
-                        position = 0;
-                    }
-                }
+        // Logos are lazy-loaded, so re-measure once everything has laid out.
+        const measure = () => { trackWidth = this.track.scrollWidth / 2; };
+        window.addEventListener('load', measure);
+        window.addEventListener('resize', measure);
 
-                this.track.style.transform = `translateX(${position}px)`;
-            }
+        const step = (now) => {
+            const dt = Math.min((now - last) / 1000, 0.1); // seconds, clamped after tab switches
+            last = now;
 
+            const target = this.isPaused ? 0 : 1;
+            factor += (target - factor) * Math.min(dt * 6, 1);
+
+            const delta = this.options.speed * factor * dt;
+            position += this.options.direction === 'left' ? -delta : delta;
+
+            if (position <= -trackWidth) position += trackWidth;
+            if (position > 0 && this.options.direction === 'left') position -= trackWidth;
+            if (position >= trackWidth) position -= trackWidth;
+
+            this.track.style.transform = `translateX(${position}px)`;
             requestAnimationFrame(step);
         };
 

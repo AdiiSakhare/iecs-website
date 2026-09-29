@@ -16,7 +16,7 @@
 
 /* Slide Animations */
 .slide-in-up {
-    animation: slideInUp 0.6s ease-out forwards;
+    animation: slideInUp 0.6s var(--ease-out) forwards;
 }
 
 @keyframes slideInUp {
@@ -132,22 +132,47 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Intersection Observer Animations */
+/* Scroll reveal - opacity + a short rise. Uses the individual `translate`
+   property (not `transform`) so it never fights hover transforms on the same
+   element. --reveal-delay is set per element by main.js to stagger siblings. */
 .fade-in-on-scroll {
     opacity: 0;
+    translate: 0 16px;
 }
 
 .fade-in-on-scroll.visible {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: reveal 640ms var(--ease-out) var(--reveal-delay, 0ms) both;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0 16px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
 }
 
 .slide-in-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
+    translate: 0 30px;
 }
 
 .slide-in-on-scroll.visible {
-    animation: slideInUp 0.8s ease-out forwards;
+    animation: revealLong 800ms var(--ease-out) var(--reveal-delay, 0ms) both;
+}
+
+@keyframes revealLong {
+    from {
+        opacity: 0;
+        translate: 0 30px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
 }
 
 /* Parallax base */
@@ -180,7 +205,11 @@ html {
     transform: scale(0.98);
 }
 
-/* Smooth transitions for all interactive elements */
+/* Baseline for interactive elements - named properties only, never `all`
+   (which also animates layout and fights transform-based effects) */
 button, a, input, textarea, select {
-    transition: all var(--transition-fast-150ms);
+    transition: color var(--transition-fast-150ms),
+                background-color var(--transition-fast-150ms),
+                border-color var(--transition-fast-150ms),
+                opacity var(--transition-fast-150ms);
 }

@@ -1,0 +1,382 @@
+/* ============================================
+   CONTACT PAGE
+   No form on this static site: enquiry tiles open the visitor's email app.
+============================================ */
+
+/* ---------- How can we help - enquiry tiles ---------- */
+.contact-help {
+    background: var(--color-white-ffffff);
+}
+
+.help-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-24px);
+}
+
+.help-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--space-32px) var(--space-24px);
+}
+
+.help-tile .card-icon {
+    margin: 0 0 var(--space-24px);
+}
+
+.help-tile h3 {
+    color: var(--color-neutral-900-18181b);
+    margin-bottom: var(--space-8px);
+}
+
+.help-tile p {
+    color: var(--color-neutral-600-52525c);
+    margin-bottom: var(--space-24px);
+}
+
+.help-tile-link {
+    margin-top: auto;
+    font-size: var(--fontSize-body-14px);
+    font-weight: 600;
+    color: var(--primary-hover);
+}
+
+.help-tile-link span {
+    display: inline-block;
+    transition: transform 250ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .help-tile:hover .help-tile-link span {
+        transform: translateX(4px);
+    }
+}
+
+/* ---------- Details + map ---------- */
+.contact-details {
+    background: var(--muted-bg);
+}
+
+.contact-split {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: var(--space-32px);
+    align-items: stretch;
+}
+
+.contact-panel {
+    padding: var(--space-40px);
+    background: var(--color-white-ffffff);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card-12px);
+}
+
+.contact-panel h2 {
+    margin-bottom: var(--space-24px);
+    color: var(--color-neutral-900-18181b);
+}
+
+.contact-rows {
+    list-style: none;
+    margin: 0 0 var(--space-32px);
+    padding: 0;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-16px);
+    padding: var(--space-16px) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-row:first-child {
+    padding-top: 0;
+}
+
+.contact-row-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--primary-subtle);
+    color: var(--primary-hover);
+    flex-shrink: 0;
+    transition: background-color 250ms ease-out, color 250ms ease-out;
+}
+
+.contact-row-icon-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-row-icon-sm svg {
+    width: 16px;
+    height: 16px;
+}
+
+.contact-row-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.contact-row-label {
+    font-size: var(--fontSize-sm-13px);
+    color: var(--muted-foreground);
+}
+
+.contact-row-text a,
+.contact-row-value {
+    font-size: var(--fontSize-md-16px);
+    font-weight: 600;
+    color: var(--color-neutral-900-18181b);
+    overflow-wrap: anywhere;
+}
+
+.contact-row-text a:hover {
+    color: var(--primary-hover);
+}
+
+/* Copy button: icon swaps to a check for a moment after copying */
+.copy-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--color-white-ffffff);
+    color: var(--color-neutral-600-52525c);
+    cursor: pointer;
+    transition: transform 160ms var(--ease-out),
+                background-color 200ms ease-out,
+                border-color 200ms ease-out,
+                color 200ms ease-out;
+}
+
+.copy-btn:active {
+    transform: scale(0.92);
+}
+
+.copy-btn > span {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transition: opacity 180ms ease-out, transform 220ms var(--ease-out);
+}
+
+.copy-btn .copy-done {
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.copy-btn.copied {
+    background: var(--color-green-50-f0fdf4);
+    border-color: var(--color-green-300-7bf1a8);
+    color: var(--color-green-700-008236);
+}
+
+.copy-btn.copied .copy-icon {
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.copy-btn.copied .copy-done {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .copy-btn:hover {
+        border-color: var(--primary);
+        color: var(--primary-hover);
+    }
+
+    .contact-row:hover .contact-row-icon {
+        background: var(--primary);
+        color: var(--color-white-ffffff);
+    }
+}
+
+/* Business hours */
+.hours-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-8px) var(--space-16px);
+    margin-bottom: var(--space-8px);
+}
+
+.hours-head h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8px);
+    font-size: var(--fontSize-md-16px);
+    color: var(--color-neutral-900-18181b);
+}
+
+.contact-hours-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-16px);
+    padding: var(--space-16px) 0;
+    border-bottom: 1px solid var(--border);
+    font-size: var(--fontSize-body-14px);
+    color: var(--color-neutral-600-52525c);
+}
+
+.contact-hours-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-hours-row span:first-child {
+    color: var(--color-neutral-900-18181b);
+    font-weight: 600;
+}
+
+/* "Open now / Closed" badge (set by contact.js) */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-8px);
+    padding: var(--space-4px) var(--space-16px) var(--space-4px) var(--space-8px);
+    border-radius: 999px;
+    background: var(--color-neutral-100-f4f4f5);
+    color: var(--color-neutral-600-52525c);
+    font-size: var(--fontSize-sm-13px);
+    font-weight: 600;
+}
+
+.status-badge[hidden] {
+    display: none;
+}
+
+.status-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin-left: var(--space-4px);
+    border-radius: 50%;
+    background: var(--color-neutral-400-9f9fa9);
+}
+
+.status-badge[data-state="open"] {
+    background: var(--color-green-50-f0fdf4);
+    color: var(--color-green-800-016630);
+}
+
+.status-badge[data-state="open"] .status-dot {
+    background: var(--success);
+}
+
+.status-badge[data-state="open"] .status-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--success);
+    animation: status-pulse 2s var(--ease-out) infinite;
+}
+
+@keyframes status-pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* ---------- Google Maps embed ---------- */
+.map-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--color-white-ffffff);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card-12px);
+}
+
+.map-canvas {
+    position: relative;
+    flex: 1;
+    min-height: 320px;
+    background: var(--color-neutral-100-f4f4f5); /* shows while the map loads */
+}
+
+.map-embed {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-16px);
+    padding: var(--space-24px);
+    border-top: 1px solid var(--border);
+}
+
+.map-info h3 {
+    margin-bottom: var(--space-4px);
+    color: var(--color-neutral-900-18181b);
+}
+
+.map-info p {
+    color: var(--color-neutral-600-52525c);
+}
+
+/* ---------- Bottom CTA (reuses .cta-panel from sections.css) ---------- */
+.contact-cta {
+    background: var(--color-white-ffffff);
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-16px);
+    flex-shrink: 0;
+}
+
+.cta-panel .btn-secondary {
+    background: transparent;
+    color: var(--color-white-ffffff);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.cta-panel .btn-secondary:hover {
+    background: var(--color-white-ffffff);
+    color: var(--color-primary-700-1447e6);
+    border-color: var(--color-white-ffffff);
+}
+
+@media (max-width: 900px) {
+    .contact-split {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-panel {
+        padding: var(--space-32px) var(--space-24px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .status-badge[data-state="open"] .status-dot::after {
+        animation: none;
+    }
+}

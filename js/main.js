@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // Intersection Observer for scroll animations
 function initializeIntersectionObserver() {
     const observer = new IntersectionObserver((entries) => {
+        // Elements that enter in the same batch (a row of cards, a heading + its
+        // paragraph) cascade 70ms apart instead of popping in together.
+        let order = 0;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                entry.target.style.setProperty('--reveal-delay', `${Math.min(order, 5) * 70}ms`);
+                order++;
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }

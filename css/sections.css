@@ -50,7 +50,7 @@
         transform: translateY(-12px);
         opacity: 0;
         pointer-events: none;
-        transition: all var(--transition-base-250ms);
+        transition: transform 250ms var(--ease-drawer), opacity 200ms ease-out;
     }
 
     .navbar-menu.active {
@@ -438,7 +438,9 @@
     border-radius: var(--radius-card-12px);
     padding: var(--space-32px) var(--space-24px);
     text-align: center;
-    transition: all var(--transition-base-250ms);
+    transition: transform 250ms var(--ease-out),
+                border-color 250ms ease-out,
+                box-shadow 250ms ease-out;
 }
 
 .contact-card:hover {
@@ -636,7 +638,10 @@
     font-size: var(--fontSize-body-14px);
     font-weight: 500;
     white-space: nowrap;
-    transition: all var(--transition-base-250ms);
+    transition: transform 160ms var(--ease-out),
+                background-color 200ms ease-out,
+                color 200ms ease-out,
+                border-color 200ms ease-out;
 }
 
 .catalog-nav-list a:hover {
@@ -827,31 +832,6 @@
         align-items: flex-start;
         padding: var(--space-32px) var(--space-24px);
     }
-}
-
-/* ============================================
-   CONTACT PAGE - hours row
-============================================ */
-.contact-hours {
-    max-width: 640px;
-    margin: var(--space-64px) auto 0;
-    text-align: center;
-}
-
-.contact-hours-row {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--space-16px) 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.contact-hours-row:last-child {
-    border-bottom: none;
-}
-
-.contact-hours-row span:first-child {
-    color: var(--foreground);
-    font-weight: 600;
 }
 
 /* ============================================
