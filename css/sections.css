@@ -35,11 +35,6 @@
     box-shadow: none;
 }
 
-body:not(.home) .navbar-toggle span {
-    background: var(--foreground);
-    box-shadow: none;
-}
-
 @media (max-width: 900px) {
     .navbar-menu {
         position: fixed;

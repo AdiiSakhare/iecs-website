@@ -7,7 +7,7 @@ body {
     line-height: var(--lineHeight-normal-1-6);
 }
 
-/* Navbar - transparent over the hero/page-header on load, 70% translucent
+/* Navbar - transparent over the hero/page-header on load (same on every page), 70% translucent
    white with blur once scrolled. No auto-hide: stays put, only its
    background/text/logo transition based on scroll position. */
 .navbar {
@@ -39,38 +39,6 @@ body {
         -webkit-backdrop-filter: none;
         border-bottom-color: var(--border);
     }
-}
-
-/* Inner pages (About/Services/Products/Contact) have a light page-header,
-   not a dark hero photo, under the navbar - so they skip the transparent+
-   white top state entirely and start translucent/dark like .scrolled. */
-body:not(.home) .navbar {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border-bottom-color: rgba(0, 0, 0, 0.08);
-}
-
-body:not(.home) .navbar-menu a {
-    color: var(--foreground);
-    text-shadow: none;
-}
-
-body:not(.home) .navbar-menu a:hover {
-    color: var(--primary);
-}
-
-body:not(.home) .navbar-menu a.active {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-
-body:not(.home) .navbar-logo-white {
-    display: none;
-}
-
-body:not(.home) .navbar-logo-dark {
-    display: block;
 }
 
 .navbar-content {
