@@ -221,18 +221,20 @@ body:not(.home) .navbar-logo-dark {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding-top: var(--space-24px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: var(--space-8px) var(--space-24px);
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-white-ffffff);
 }
 
 .footer-bottom p {
     margin: 0;
+    font-size: inherit;
+    color: var(--color-white-ffffff);
 }
 
 @media (max-width: 1024px) {
