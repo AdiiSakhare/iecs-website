@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 function animateHeroSection() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const timeline = gsap.timeline();
 
@@ -13,7 +14,7 @@ function animateHeroSection() {
         duration: 0.8,
         opacity: 0,
         y: 50,
-        ease: 'power2.out'
+        ease: 'expo.out'
     })
     .from('.hero-content p', {
         duration: 0.8,
@@ -28,30 +29,9 @@ function animateHeroSection() {
     // permanently invisible primary CTA is worse than a missing fade-in.
 }
 
-// Hover animations for interactive elements
-function initializeHoverAnimations() {
-    const hoverElements = document.querySelectorAll('.hover-lift, .card');
-
-    hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            gsap.to(this, {
-                duration: 0.3,
-                y: -8,
-                boxShadow: '0 12px 32px rgba(0, 0, 0, 0.12)',
-                ease: 'power2.out'
-            });
-        });
-
-        element.addEventListener('mouseleave', function() {
-            gsap.to(this, {
-                duration: 0.3,
-                y: 0,
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                ease: 'power2.out'
-            });
-        });
-    });
-}
+// Card/button hover effects live in css/motion.css (CSS transitions are
+// interruptible and keep the hover state in one place). They used to be
+// GSAP tweens here, which wrote inline transforms and shadows that fought the CSS.
 
 // Number counter animation
 function animateCounters() {
@@ -121,7 +101,6 @@ function animateGradientBackground() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         animateHeroSection();
-        initializeHoverAnimations();
         animateCounters();
         animateListItems();
         animateGradientBackground();

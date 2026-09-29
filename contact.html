@@ -6,12 +6,15 @@
     <title>Contact - IECS | Industrial Engineering Control Services</title>
 
     <!-- CSS -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo/favicon.svg">
     <link rel="stylesheet" href="./css/reset.css?v=12">
-    <link rel="stylesheet" href="./css/variables.css?v=12">
-    <link rel="stylesheet" href="./css/components.css?v=12">
-    <link rel="stylesheet" href="./css/animations.css?v=12">
-    <link rel="stylesheet" href="./css/main.css?v=12">
-    <link rel="stylesheet" href="./css/sections.css?v=12">
+    <link rel="stylesheet" href="./css/variables.css?v=5">
+    <link rel="stylesheet" href="./css/components.css?v=7">
+    <link rel="stylesheet" href="./css/animations.css?v=3">
+    <link rel="stylesheet" href="./css/main.css?v=23">
+    <link rel="stylesheet" href="./css/sections.css?v=31">
+    <link rel="stylesheet" href="./css/contact.css?v=2">
+    <link rel="stylesheet" href="./css/motion.css?v=1">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +36,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="index.html#why-us">Why Us</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
 
@@ -54,51 +56,127 @@
             </div>
         </section>
 
-        <!-- ============ CONTACT DETAILS ============ -->
-        <!-- PLACEHOLDER CONTACT DETAILS: replace phone/email/address/hours with real client info -->
-        <section class="contact-section section section-dark">
+        <!-- ============ HOW CAN WE HELP ============ -->
+        <!-- No form (static site): each tile opens the visitor's email app with a pre-filled subject and template -->
+        <section class="contact-help section">
             <div class="container">
-                <h2 class="sr-only">Reach Us Directly</h2>
-                <div class="grid contact-grid">
-                    <div class="contact-card fade-in-on-scroll">
-                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></div>
-                        <h3>Phone</h3>
-                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                    </div>
-                    <div class="contact-card fade-in-on-scroll">
-                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M2 6l10 7L22 6M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:info@iecs.co.in">info@iecs.co.in</a></p>
-                    </div>
-                    <div class="contact-card fade-in-on-scroll">
-                        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                        <h3>Address</h3>
-                        <p>Industrial Area, Pune, Maharashtra, India</p>
-                    </div>
+                <div class="section-title fade-in-on-scroll">
+                    <h2>How Can We Help?</h2>
+                    <p>Pick what you need and we'll open a pre-filled email. Add your details and hit send.</p>
                 </div>
+                <div class="grid help-grid">
+                    <a href="mailto:info@iecs.co.in?subject=Quote%20request&amp;body=Hello%20IECS%20team%2C%0D%0A%0D%0AI%27d%20like%20a%20quote%20for%3A%0D%0A-%20Equipment%20%2F%20solution%3A%0D%0A-%20Quantity%3A%0D%0A-%20Required%20by%3A%0D%0A%0D%0AMy%20details%3A%0D%0A-%20Name%3A%0D%0A-%20Company%3A%0D%0A-%20Phone%3A" class="card help-tile fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+                        <h3>Request a Quote</h3>
+                        <p>Tell us what you need built or supplied and we'll come back with a quote.</p>
+                        <span class="help-tile-link">Email us <span aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a href="mailto:info@iecs.co.in?subject=Custom%20build%20enquiry&amp;body=Hello%20IECS%20team%2C%0D%0A%0D%0AI%27d%20like%20to%20discuss%20a%20custom%20build%3A%0D%0A-%20What%20the%20equipment%20needs%20to%20do%3A%0D%0A-%20Part%20%2F%20product%20being%20handled%3A%0D%0A-%20Space%20available%3A%0D%0A%0D%0AMy%20details%3A%0D%0A-%20Name%3A%0D%0A-%20Company%3A%0D%0A-%20Phone%3A" class="card help-tile fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div>
+                        <h3>Custom Build</h3>
+                        <p>Have a process or layout in mind? We design and build equipment around it.</p>
+                        <span class="help-tile-link">Email us <span aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a href="mailto:info@iecs.co.in?subject=Service%20and%20maintenance%20request&amp;body=Hello%20IECS%20team%2C%0D%0A%0D%0AI%20need%20service%20%2F%20maintenance%20support%3A%0D%0A-%20Equipment%3A%0D%0A-%20Issue%20or%20work%20required%3A%0D%0A-%20Location%3A%0D%0A%0D%0AMy%20details%3A%0D%0A-%20Name%3A%0D%0A-%20Company%3A%0D%0A-%20Phone%3A" class="card help-tile fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <h3>Service &amp; Maintenance</h3>
+                        <p>Installation, commissioning or support for equipment already on your floor.</p>
+                        <span class="help-tile-link">Email us <span aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a href="mailto:info@iecs.co.in?subject=General%20enquiry&amp;body=Hello%20IECS%20team%2C%0D%0A%0D%0AMy%20question%3A%0D%0A%0D%0A%0D%0A%0D%0AMy%20details%3A%0D%0A-%20Name%3A%0D%0A-%20Company%3A%0D%0A-%20Phone%3A" class="card help-tile fade-in-on-scroll">
+                        <div class="card-icon primary"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                        <h3>General Enquiry</h3>
+                        <p>Anything else - partnerships, distribution or a quick question.</p>
+                        <span class="help-tile-link">Email us <span aria-hidden="true">&rarr;</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                <div class="contact-hours fade-in-on-scroll">
-                    <h3>Business Hours</h3>
-                    <div class="contact-hours-row">
-                        <span>Monday - Saturday</span>
-                        <span>9:30 AM - 6:30 PM</span>
+        <!-- ============ DETAILS + MAP ============ -->
+        <!-- PLACEHOLDER CONTACT DETAILS: replace phone/email/address/hours with real client info -->
+        <section class="contact-details section">
+            <div class="container">
+                <div class="contact-split">
+                    <div class="contact-panel fade-in-on-scroll">
+                        <h2>Contact Details</h2>
+                        <ul class="contact-rows">
+                            <li class="contact-row">
+                                <span class="contact-row-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span>
+                                <div class="contact-row-text">
+                                    <span class="contact-row-label">Phone</span>
+                                    <a href="tel:+919876543210">+91 98765 43210</a>
+                                </div>
+                                <button type="button" class="copy-btn" data-copy="+91 98765 43210" aria-label="Copy phone number">
+                                    <span class="copy-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></span><span class="copy-done"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                </button>
+                            </li>
+                            <li class="contact-row">
+                                <span class="contact-row-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6l10 7L22 6M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span>
+                                <div class="contact-row-text">
+                                    <span class="contact-row-label">Email</span>
+                                    <a href="mailto:info@iecs.co.in">info@iecs.co.in</a>
+                                </div>
+                                <button type="button" class="copy-btn" data-copy="info@iecs.co.in" aria-label="Copy email address">
+                                    <span class="copy-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></span><span class="copy-done"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                </button>
+                            </li>
+                            <li class="contact-row">
+                                <span class="contact-row-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                                <div class="contact-row-text">
+                                    <span class="contact-row-label">Address</span>
+                                    <span class="contact-row-value">Industrial Area, Pune, Maharashtra, India</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="hours-head">
+                            <h3><span class="contact-row-icon contact-row-icon-sm"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>Business Hours</h3>
+                            <span class="status-badge" id="hours-status" data-state="unknown" hidden>
+                                <span class="status-dot" aria-hidden="true"></span><span id="hours-status-text"></span>
+                            </span>
+                        </div>
+                        <div class="contact-hours-row">
+                            <span>Monday - Saturday</span>
+                            <span>9:30 AM - 6:30 PM</span>
+                        </div>
+                        <div class="contact-hours-row">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </div>
                     </div>
-                    <div class="contact-hours-row">
-                        <span>Sunday</span>
-                        <span>Closed</span>
+
+                    <!-- Google Maps embed. TEMPORARY location: Baner Business Bay, Baner, Pune (from the link the client shared).
+                         To change it, replace the q= value in the iframe src (and in the Get Directions link below),
+                         or paste the embed URL from Google Maps > Share > Embed a map. -->
+                    <div class="map-card fade-in-on-scroll">
+                        <div class="map-canvas">
+                            <iframe class="map-embed" title="IECS location on Google Maps" src="https://maps.google.com/maps?q=Baner+Business+Bay,+Baner,+Pune&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        </div>
+                        <div class="map-info">
+                            <div>
+                                <h3>IECS</h3>
+                                <p>Industrial Area, Pune, Maharashtra, India</p>
+                            </div>
+                            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Baner+Business+Bay+Baner+Pune" target="_blank" rel="noopener">Get Directions</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ============ CTA ============ -->
-        <section class="section">
-            <div class="container flex-center flex-col" style="text-align:center;">
-                <h2 class="fade-in-on-scroll">Prefer to Talk Through the Details?</h2>
-                <p style="max-width:56ch;margin:var(--space-16px) 0 var(--space-32px);">Call or email us directly - our engineering team can walk through requirements, drawings and timelines with you.</p>
-                <div class="hero-cta-row">
-                    <a href="tel:+919876543210" class="btn btn-primary">Call Us</a>
-                    <a href="mailto:info@iecs.co.in" class="btn btn-secondary">Email Us</a>
+        <section class="contact-cta section">
+            <div class="container">
+                <div class="cta-panel fade-in-on-scroll">
+                    <div>
+                        <h2>Prefer to Talk Through the Details?</h2>
+                        <p>Call or email us directly. Our engineering team can walk through requirements, drawings and timelines with you.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="tel:+919876543210" class="btn btn-primary">Call Us</a>
+                        <a href="mailto:info@iecs.co.in" class="btn btn-secondary">Email Us</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -109,13 +187,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section footer-brand">
-                    <img src="./assets/images/logo/iecs-logo.svg" alt="IECS">
+                    <img src="./assets/images/logo/iecs-logo-white.svg" alt="IECS">
                     <p>Industrial Engineering Control Services, engineering excellence for a better tomorrow.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -156,9 +229,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script src="./js/main.js?v=12"></script>
-    <script src="./js/navbar.js?v=12"></script>
-    <script src="./js/animations.js?v=12"></script>
-    <script src="./js/carousel.js?v=12"></script>
+    <script src="./js/main.js?v=13"></script>
+    <script src="./js/navbar.js?v=13"></script>
+    <script src="./js/animations.js?v=13"></script>
+    <script src="./js/carousel.js?v=13"></script>
+    <script src="./js/motion.js?v=1"></script>
+    <script src="./js/contact.js?v=1"></script>
 </body>
 </html>

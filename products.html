@@ -6,12 +6,14 @@
     <title>Products - IECS | Industrial Engineering Control Services</title>
 
     <!-- CSS -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo/favicon.svg">
     <link rel="stylesheet" href="./css/reset.css?v=12">
-    <link rel="stylesheet" href="./css/variables.css?v=12">
-    <link rel="stylesheet" href="./css/components.css?v=12">
-    <link rel="stylesheet" href="./css/animations.css?v=12">
-    <link rel="stylesheet" href="./css/main.css?v=12">
-    <link rel="stylesheet" href="./css/sections.css?v=12">
+    <link rel="stylesheet" href="./css/variables.css?v=5">
+    <link rel="stylesheet" href="./css/components.css?v=7">
+    <link rel="stylesheet" href="./css/animations.css?v=3">
+    <link rel="stylesheet" href="./css/main.css?v=23">
+    <link rel="stylesheet" href="./css/sections.css?v=31">
+    <link rel="stylesheet" href="./css/motion.css?v=1">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +35,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="products.html" class="active">Products</a></li>
-                    <li><a href="index.html#why-us">Why Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 
@@ -54,183 +55,476 @@
             </div>
         </section>
 
+        <div class="catalog">
+        <!-- ============ CATEGORY NAV ============ -->
+        <nav class="catalog-nav" aria-label="Product categories">
+            <div class="container catalog-nav-inner">
+                <ul class="catalog-nav-list">
+                    <li><a href="#vision"><span class="catalog-nav-num">01</span>Vision &amp; Testing<span class="catalog-nav-count">3</span></a></li>
+                    <li><a href="#conveyors"><span class="catalog-nav-num">02</span>Conveyors &amp; Lines<span class="catalog-nav-count">9</span></a></li>
+                    <li><a href="#guarding"><span class="catalog-nav-num">03</span>Guarding &amp; Enclosures<span class="catalog-nav-count">6</span></a></li>
+                    <li><a href="#workbenches"><span class="catalog-nav-num">04</span>Workbenches<span class="catalog-nav-count">7</span></a></li>
+                    <li><a href="#storage"><span class="catalog-nav-num">05</span>Storage &amp; Transport<span class="catalog-nav-count">9</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- ============ PRODUCTS CATALOG ============ -->
         <!-- Most images below are placeholder photos pending real product photography - see assets/images/products/README.md -->
-        <section class="section">
+        <!-- PLACEHOLDER COPY: product descriptions and tags are drafted from what each photo shows; confirm with client before launch -->
+        <section class="catalog-section" id="vision">
             <div class="container">
-
-                <!-- Vision & Testing Systems -->
-                <div class="product-category">
-                    <h2 class="product-category-title fade-in-on-scroll">Vision &amp; Testing Systems</h2>
-                    <div class="grid products-grid">
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/vision-testing-system-enclosure.jpeg" alt="Vision Testing System">
-                            <div class="product-caption"><span>Vision Testing System</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/vision-testing-bench-enclosure.jpeg" alt="Vision Testing Bench">
-                            <div class="product-caption"><span>Vision Testing Bench</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/final-inspection-station-cabinet-placeholder.png" alt="Final inspection station">
-                            <div class="product-caption"><span>Final Inspection Station</span></div>
-                        </div>
+                <header class="catalog-head fade-in-on-scroll">
+                    <span class="catalog-index" aria-hidden="true">01</span>
+                    <div class="catalog-head-text">
+                        <h2>Vision &amp; Testing Systems</h2>
+                        <p>Enclosed cells and benches for camera-based inspection and quality checks, built around your part and test process.</p>
                     </div>
+                    <span class="catalog-count">3 products</span>
+                </header>
+                <div class="grid products-grid">
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/vision-testing-system-enclosure.jpeg" alt="Vision Testing System" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Vision Testing System</h3>
+                            <p>Enclosed inspection cell with camera mounting, integrated display and controls for repeatable in-line testing.</p>
+                            <ul class="product-tags"><li>Enclosed</li><li>Camera-ready</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/vision-testing-bench-enclosure.jpeg" alt="Vision Testing Bench" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Vision Testing Bench</h3>
+                            <p>Bench-top vision test station with controlled lighting and an operator display for component checks.</p>
+                            <ul class="product-tags"><li>Bench-top</li><li>Controlled lighting</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/final-inspection-station-cabinet-placeholder.png" alt="Final inspection station" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Final Inspection Station</h3>
+                            <p>Full-length inspection bench with overhead frame and storage below, for end-of-line quality checks.</p>
+                            <ul class="product-tags"><li>Quality checks</li><li>Storage</li></ul>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <!-- Conveyors & Assembly Lines -->
-                <div class="product-category">
-                    <h2 class="product-category-title fade-in-on-scroll">Conveyors &amp; Assembly Lines</h2>
-                    <div class="grid products-grid">
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/automated-assembly-line-safety-guarding-placeholder.png" alt="Automated assembly line with safety guarding">
-                            <div class="product-caption"><span>Automated Assembly Line</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/inclined-belt-conveyor-placeholder.png" alt="Inclined belt conveyor">
-                            <div class="product-caption"><span>Inclined Belt Conveyor</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/incline-belt-conveyor-mobile-placeholder.png" alt="Mobile inclined belt conveyor on castors">
-                            <div class="product-caption"><span>Mobile Incline Conveyor</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/mobile-belt-conveyor-castors-placeholder.png" alt="Mobile belt conveyor on castors">
-                            <div class="product-caption"><span>Mobile Belt Conveyor</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/dual-lane-belt-conveyor-control-panel-placeholder.png" alt="Dual lane belt conveyor with control panel">
-                            <div class="product-caption"><span>Dual-Lane Belt Conveyor</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/dual-lane-conveyor-estop-stations-placeholder.png" alt="Dual lane conveyor with e-stop stations">
-                            <div class="product-caption"><span>Dual-Lane Conveyor, E-Stop Stations</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/belt-conveyor-overhead-light-frame-placeholder.png" alt="Belt conveyor with overhead light frame">
-                            <div class="product-caption"><span>Conveyor with Overhead Light Frame</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/multi-tier-conveyor-motor-rack-placeholder.png" alt="Multi-tier conveyor with motor rack">
-                            <div class="product-caption"><span>Multi-Tier Conveyor</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/assembly-workstation-conveyor-infeed-placeholder.png" alt="Assembly workstation with conveyor infeed">
-                            <div class="product-caption"><span>Assembly Workstation, Conveyor Infeed</span></div>
-                        </div>
+        <section class="catalog-section catalog-section-alt" id="conveyors">
+            <div class="container">
+                <header class="catalog-head fade-in-on-scroll">
+                    <span class="catalog-index" aria-hidden="true">02</span>
+                    <div class="catalog-head-text">
+                        <h2>Conveyors &amp; Assembly Lines</h2>
+                        <p>Belt conveyors and assembly lines in flat, inclined, dual-lane and multi-tier layouts, with controls and safety stops.</p>
                     </div>
+                    <span class="catalog-count">9 products</span>
+                </header>
+                <div class="grid products-grid">
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/automated-assembly-line-safety-guarding-placeholder.png" alt="Automated assembly line with safety guarding" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Automated Assembly Line</h3>
+                            <p>Conveyor line with safety guarding and operator stations for automated assembly.</p>
+                            <ul class="product-tags"><li>Guarded</li><li>Automated</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/inclined-belt-conveyor-placeholder.png" alt="Inclined belt conveyor" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Inclined Belt Conveyor</h3>
+                            <p>Belt conveyor with an incline section for lifting parts between levels.</p>
+                            <ul class="product-tags"><li>Incline</li><li>Belt</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/incline-belt-conveyor-mobile-placeholder.png" alt="Mobile inclined belt conveyor on castors" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Mobile Incline Conveyor</h3>
+                            <p>Inclined belt conveyor on castors, easy to reposition across the shop floor.</p>
+                            <ul class="product-tags"><li>Mobile</li><li>Incline</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/mobile-belt-conveyor-castors-placeholder.png" alt="Mobile belt conveyor on castors" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Mobile Belt Conveyor</h3>
+                            <p>Flat belt conveyor on castors for flexible line layouts.</p>
+                            <ul class="product-tags"><li>Mobile</li><li>Belt</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/dual-lane-belt-conveyor-control-panel-placeholder.png" alt="Dual lane belt conveyor with control panel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Dual-Lane Belt Conveyor</h3>
+                            <p>Two parallel lanes with a dedicated control panel for independent product flow.</p>
+                            <ul class="product-tags"><li>Dual lane</li><li>Control panel</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/dual-lane-conveyor-estop-stations-placeholder.png" alt="Dual lane conveyor with e-stop stations" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Dual-Lane Conveyor, E-Stop Stations</h3>
+                            <p>Dual-lane conveyor with emergency-stop stations along the line for operator safety.</p>
+                            <ul class="product-tags"><li>Dual lane</li><li>E-Stop</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/belt-conveyor-overhead-light-frame-placeholder.png" alt="Belt conveyor with overhead light frame" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Conveyor with Overhead Light Frame</h3>
+                            <p>Belt conveyor with an overhead lighting frame for well-lit inspection and assembly.</p>
+                            <ul class="product-tags"><li>Lighting</li><li>Inspection</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/multi-tier-conveyor-motor-rack-placeholder.png" alt="Multi-tier conveyor with motor rack" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Multi-Tier Conveyor</h3>
+                            <p>Multi-level conveyor arrangement with a motor rack, saving floor space.</p>
+                            <ul class="product-tags"><li>Multi-tier</li><li>Compact</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/assembly-workstation-conveyor-infeed-placeholder.png" alt="Assembly workstation with conveyor infeed" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Assembly Workstation, Conveyor Infeed</h3>
+                            <p>Workstation fed directly by a conveyor infeed to keep parts moving to the operator.</p>
+                            <ul class="product-tags"><li>Workstation</li><li>Infeed</li></ul>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <!-- Machine Guarding & Enclosures -->
-                <div class="product-category">
-                    <h2 class="product-category-title fade-in-on-scroll">Machine Guarding &amp; Enclosures</h2>
-                    <div class="grid products-grid">
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/perforated-mesh-machine-safety-enclosure-large-placeholder.png" alt="Perforated mesh machine safety enclosure">
-                            <div class="product-caption"><span>Machine Safety Enclosure</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/machine-safety-cage-mesh-panel-placeholder.png" alt="Machine safety cage with mesh panel">
-                            <div class="product-caption"><span>Machine Safety Cage</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/machine-safety-frame-unclad-placeholder.png" alt="Machine safety guard frame, unclad">
-                            <div class="product-caption"><span>Safety Guard Frame</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/mesh-machine-guard-factory-floor-placeholder.png" alt="Mesh machine guard on factory floor">
-                            <div class="product-caption"><span>Mesh Machine Guard</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/polycarbonate-machine-guard-enclosure-placeholder.png" alt="Polycarbonate machine guard enclosure">
-                            <div class="product-caption"><span>Polycarbonate Guard Enclosure</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/machine-access-platform-steps-placeholder.png" alt="Machine access platform with steps">
-                            <div class="product-caption"><span>Machine Access Platform</span></div>
-                        </div>
+        <section class="catalog-section" id="guarding">
+            <div class="container">
+                <header class="catalog-head fade-in-on-scroll">
+                    <span class="catalog-index" aria-hidden="true">03</span>
+                    <div class="catalog-head-text">
+                        <h2>Machine Guarding &amp; Enclosures</h2>
+                        <p>Perimeter guards and enclosures in mesh or polycarbonate that protect operators without blocking the process.</p>
                     </div>
+                    <span class="catalog-count">6 products</span>
+                </header>
+                <div class="grid products-grid">
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/perforated-mesh-machine-safety-enclosure-large-placeholder.png" alt="Perforated mesh machine safety enclosure" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Machine Safety Enclosure</h3>
+                            <p>Perforated-mesh enclosure that keeps operators clear of moving machinery.</p>
+                            <ul class="product-tags"><li>Mesh</li><li>Perimeter guard</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/machine-safety-cage-mesh-panel-placeholder.png" alt="Machine safety cage with mesh panel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Machine Safety Cage</h3>
+                            <p>Safety cage with mesh panels for machine cells.</p>
+                            <ul class="product-tags"><li>Mesh panels</li><li>Machine cell</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/machine-safety-frame-unclad-placeholder.png" alt="Machine safety guard frame, unclad" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Safety Guard Frame</h3>
+                            <p>Structural guard frame supplied unclad, ready for mesh or polycarbonate panels.</p>
+                            <ul class="product-tags"><li>Frame</li><li>Unclad</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/mesh-machine-guard-factory-floor-placeholder.png" alt="Mesh machine guard on factory floor" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Mesh Machine Guard</h3>
+                            <p>Mesh guarding installed on the factory floor around production equipment.</p>
+                            <ul class="product-tags"><li>Mesh</li><li>On-site install</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/polycarbonate-machine-guard-enclosure-placeholder.png" alt="Polycarbonate machine guard enclosure" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Polycarbonate Guard Enclosure</h3>
+                            <p>Transparent polycarbonate guarding that keeps the machine visible while protecting operators.</p>
+                            <ul class="product-tags"><li>Polycarbonate</li><li>Visibility</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/machine-access-platform-steps-placeholder.png" alt="Machine access platform with steps" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Machine Access Platform</h3>
+                            <p>Access platform with steps for safe operator or maintenance reach.</p>
+                            <ul class="product-tags"><li>Platform</li><li>Steps</li></ul>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <!-- Assembly Workbenches -->
-                <div class="product-category">
-                    <h2 class="product-category-title fade-in-on-scroll">Assembly Workbenches</h2>
-                    <div class="grid products-grid">
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/assembly-workbench-pegboard-panel-placeholder.png" alt="Assembly workbench with pegboard panel">
-                            <div class="product-caption"><span>Pegboard Assembly Workbench</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/esd-assembly-workbench-pegboard-placeholder.png" alt="ESD-safe assembly workbench with pegboard">
-                            <div class="product-caption"><span>ESD-Safe Assembly Workbench</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/assembly-workbench-cluster-drawer-storage-placeholder.png" alt="Assembly workbench cluster with drawer storage">
-                            <div class="product-caption"><span>Workbench Cluster, Drawer Storage</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/assembly-workbench-row-mesh-panel-placeholder.png" alt="Row of assembly workbenches with mesh panel">
-                            <div class="product-caption"><span>Workbench Row, Mesh Panel</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/assembly-workbench-row-perforated-backpanel-placeholder.png" alt="Row of assembly workbenches with perforated backpanel">
-                            <div class="product-caption"><span>Workbench Row, Perforated Backpanel</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/multi-bay-assembly-workbench-line-placeholder.png" alt="Multi-bay assembly workbench line">
-                            <div class="product-caption"><span>Multi-Bay Workbench Line</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/labeled-workbench-component-diagram-placeholder.jpeg" alt="Labeled workbench component diagram">
-                            <div class="product-caption"><span>Workbench Component Reference</span></div>
-                        </div>
+        <section class="catalog-section catalog-section-alt" id="workbenches">
+            <div class="container">
+                <header class="catalog-head fade-in-on-scroll">
+                    <span class="catalog-index" aria-hidden="true">04</span>
+                    <div class="catalog-head-text">
+                        <h2>Assembly Workbenches</h2>
+                        <p>Ergonomic, ESD-safe and multi-station workbenches configured with panels, drawers and storage.</p>
                     </div>
+                    <span class="catalog-count">7 products</span>
+                </header>
+                <div class="grid products-grid">
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/assembly-workbench-pegboard-panel-placeholder.png" alt="Assembly workbench with pegboard panel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Pegboard Assembly Workbench</h3>
+                            <p>Assembly workbench with a pegboard panel for hanging tools and fixtures.</p>
+                            <ul class="product-tags"><li>Pegboard</li><li>Tool storage</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/esd-assembly-workbench-pegboard-placeholder.png" alt="ESD-safe assembly workbench with pegboard" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>ESD-Safe Assembly Workbench</h3>
+                            <p>ESD-safe workbench with pegboard, suited to electronics assembly.</p>
+                            <ul class="product-tags"><li>ESD-safe</li><li>Electronics</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/assembly-workbench-cluster-drawer-storage-placeholder.png" alt="Assembly workbench cluster with drawer storage" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Workbench Cluster, Drawer Storage</h3>
+                            <p>Grouped workbenches with drawer storage for team assembly cells.</p>
+                            <ul class="product-tags"><li>Drawers</li><li>Team cell</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/assembly-workbench-row-mesh-panel-placeholder.png" alt="Row of assembly workbenches with mesh panel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Workbench Row, Mesh Panel</h3>
+                            <p>Row of benches with a mesh back panel for organised, shared workspaces.</p>
+                            <ul class="product-tags"><li>Multi-station</li><li>Mesh panel</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/assembly-workbench-row-perforated-backpanel-placeholder.png" alt="Row of assembly workbenches with perforated backpanel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Workbench Row, Perforated Backpanel</h3>
+                            <p>Bench row with a perforated back panel for mounting tools and accessories.</p>
+                            <ul class="product-tags"><li>Multi-station</li><li>Perforated panel</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/multi-bay-assembly-workbench-line-placeholder.png" alt="Multi-bay assembly workbench line" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Multi-Bay Workbench Line</h3>
+                            <p>Multi-bay bench line for high-volume manual assembly.</p>
+                            <ul class="product-tags"><li>Multi-bay</li><li>High volume</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/labeled-workbench-component-diagram-placeholder.jpeg" alt="Labeled workbench component diagram" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Workbench Component Reference</h3>
+                            <p>Labeled reference showing the configurable components and add-ons available on a workbench.</p>
+                            <ul class="product-tags"><li>Configurable</li><li>Reference</li></ul>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <!-- Storage & Material Transport -->
-                <div class="product-category">
-                    <h2 class="product-category-title fade-in-on-scroll">Storage &amp; Material Transport</h2>
-                    <div class="grid products-grid">
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/tiered-shelf-material-carts-set-placeholder.png" alt="Tiered shelf material transport carts">
-                            <div class="product-caption"><span>Material Transport Carts</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/mesh-material-transport-carts-multiple-placeholder.png" alt="Mesh material transport carts">
-                            <div class="product-caption"><span>Mesh Transport Carts</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/roller-shelf-material-cart-placeholder.png" alt="Roller shelf material cart">
-                            <div class="product-caption"><span>Roller Shelf Cart</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/bin-tray-material-cart-placeholder.png" alt="Bin tray material cart">
-                            <div class="product-caption"><span>Bin Tray Cart</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/parts-bin-storage-trolley-pair-placeholder.png" alt="Parts bin storage trolley pair">
-                            <div class="product-caption"><span>Parts Bin Storage Trolley</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/tiered-tote-bin-trolley-red-placeholder.png" alt="Tiered tote bin trolley">
-                            <div class="product-caption"><span>Tiered Tote Bin Trolley</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/assembly-station-pigeonhole-storage-placeholder.png" alt="Assembly station with pigeonhole storage">
-                            <div class="product-caption"><span>Pigeonhole Storage Station</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/tiered-cart-task-light-catalog-reference-placeholder.jpeg" alt="Tiered cart with task light">
-                            <div class="product-caption"><span>Tiered Cart, Task Light</span></div>
-                        </div>
-                        <div class="product-card fade-in-on-scroll">
-                            <img src="./assets/images/products/tool-storage-cabinet-catalog-reference-placeholder.jpeg" alt="Tool storage cabinet">
-                            <div class="product-caption"><span>Tool Storage Cabinet</span></div>
-                        </div>
+        <section class="catalog-section" id="storage">
+            <div class="container">
+                <header class="catalog-head fade-in-on-scroll">
+                    <span class="catalog-index" aria-hidden="true">05</span>
+                    <div class="catalog-head-text">
+                        <h2>Storage &amp; Material Transport</h2>
+                        <p>Carts, trolleys and storage stations that keep parts organised and moving between stations.</p>
                     </div>
+                    <span class="catalog-count">9 products</span>
+                </header>
+                <div class="grid products-grid">
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/tiered-shelf-material-carts-set-placeholder.png" alt="Tiered shelf material transport carts" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Material Transport Carts</h3>
+                            <p>Tiered shelf carts for moving parts and sub-assemblies between stations.</p>
+                            <ul class="product-tags"><li>Tiered</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/mesh-material-transport-carts-multiple-placeholder.png" alt="Mesh material transport carts" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Mesh Transport Carts</h3>
+                            <p>Mesh-sided carts for visible, ventilated part transport.</p>
+                            <ul class="product-tags"><li>Mesh</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/roller-shelf-material-cart-placeholder.png" alt="Roller shelf material cart" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Roller Shelf Cart</h3>
+                            <p>Cart with roller shelves for easy loading and unloading of cartons and bins.</p>
+                            <ul class="product-tags"><li>Roller shelves</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/bin-tray-material-cart-placeholder.png" alt="Bin tray material cart" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Bin Tray Cart</h3>
+                            <p>Cart with bin trays for sorting small components.</p>
+                            <ul class="product-tags"><li>Bin trays</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/parts-bin-storage-trolley-pair-placeholder.png" alt="Parts bin storage trolley pair" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Parts Bin Storage Trolley</h3>
+                            <p>Trolleys with parts bins for organised line-side storage.</p>
+                            <ul class="product-tags"><li>Parts bins</li><li>Line-side</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/tiered-tote-bin-trolley-red-placeholder.png" alt="Tiered tote bin trolley" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Tiered Tote Bin Trolley</h3>
+                            <p>Multi-level tote-bin trolley for kitting and replenishment.</p>
+                            <ul class="product-tags"><li>Tiered</li><li>Totes</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/assembly-station-pigeonhole-storage-placeholder.png" alt="Assembly station with pigeonhole storage" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Pigeonhole Storage Station</h3>
+                            <p>Assembly station with pigeonhole storage for sorted components.</p>
+                            <ul class="product-tags"><li>Pigeonholes</li><li>Station</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/tiered-cart-task-light-catalog-reference-placeholder.jpeg" alt="Tiered cart with task light" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Tiered Cart, Task Light</h3>
+                            <p>Tiered cart with an integrated task light for work at the point of use.</p>
+                            <ul class="product-tags"><li>Task light</li><li>Tiered</li></ul>
+                        </div>
+                    </article>
+                    <article class="product-card fade-in-on-scroll">
+                        <div class="product-media">
+                            <img src="./assets/images/products/tool-storage-cabinet-catalog-reference-placeholder.jpeg" alt="Tool storage cabinet" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <h3>Tool Storage Cabinet</h3>
+                            <p>Cabinet for secure tool and fixture storage near the workstation.</p>
+                            <ul class="product-tags"><li>Cabinet</li><li>Tool storage</li></ul>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <div class="section-cta">
+
+        </div><!-- /.catalog -->
+
+        <!-- ============ HOW WE WORK ============ -->
+        <section class="catalog-process section">
+            <div class="container">
+                <div class="section-title fade-in-on-scroll">
+                    <h2>From Requirement To Shop Floor</h2>
+                    <p>Most equipment is built to order. Here is how a typical project runs.</p>
+                </div>
+                <ol class="process-steps">
+                    <li class="process-step fade-in-on-scroll">
+                        <span class="process-num">1</span>
+                        <h3>Share Your Requirement</h3>
+                        <p>Tell us about your process, the part being handled and the space you have available.</p>
+                    </li>
+                    <li class="process-step fade-in-on-scroll">
+                        <span class="process-num">2</span>
+                        <h3>Design &amp; Quote</h3>
+                        <p>We engineer the layout and confirm scope, materials and pricing with you.</p>
+                    </li>
+                    <li class="process-step fade-in-on-scroll">
+                        <span class="process-num">3</span>
+                        <h3>Build &amp; Install</h3>
+                        <p>Fabrication, installation and commissioning at your site, with support after handover.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="catalog-cta section">
+            <div class="container">
+                <div class="cta-panel fade-in-on-scroll">
+                    <div>
+                        <h2>Don't See Exactly What You Need?</h2>
+                        <p>Send us your requirement and our engineering team will design it around your process.</p>
+                    </div>
                     <a href="contact.html" class="btn btn-primary">Ask About a Custom Build</a>
                 </div>
             </div>
@@ -242,13 +536,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section footer-brand">
-                    <img src="./assets/images/logo/iecs-logo.svg" alt="IECS">
+                    <img src="./assets/images/logo/iecs-logo-white.svg" alt="IECS">
                     <p>Industrial Engineering Control Services, engineering excellence for a better tomorrow.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -289,9 +578,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script src="./js/main.js?v=12"></script>
-    <script src="./js/navbar.js?v=12"></script>
-    <script src="./js/animations.js?v=12"></script>
-    <script src="./js/carousel.js?v=12"></script>
+    <script src="./js/main.js?v=13"></script>
+    <script src="./js/navbar.js?v=13"></script>
+    <script src="./js/animations.js?v=13"></script>
+    <script src="./js/carousel.js?v=13"></script>
+    <script src="./js/motion.js?v=1"></script>
+    <script src="./js/products.js?v=1"></script>
 </body>
 </html>

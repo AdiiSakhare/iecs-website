@@ -65,7 +65,9 @@ function updateActiveNavLink() {
 function toggleMobileMenu() {
     const navbarMenu = document.querySelector('.navbar-menu');
     if (navbarMenu) {
-        navbarMenu.classList.toggle('active');
+        const open = navbarMenu.classList.toggle('active');
+        const toggle = document.querySelector('.navbar-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', String(open));
     }
 }
 
@@ -77,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const menu = document.querySelector('.navbar-menu');
             if (menu) {
                 menu.classList.remove('active');
+                const toggle = document.querySelector('.navbar-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
             }
         });
     });
