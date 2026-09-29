@@ -410,36 +410,6 @@ body:not(.home) .navbar-toggle span {
     max-width: 36ch;
 }
 
-.footer-social {
-    display: flex;
-    gap: var(--space-16px);
-    margin-top: var(--space-24px);
-}
-
-.footer-social a {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 0;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    background: rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-base-250ms);
-}
-
-.footer-social a svg {
-    width: 18px;
-    height: 18px;
-}
-
-.footer-social a:hover {
-    background: var(--color-white-ffffff);
-    border-color: var(--color-white-ffffff);
-    color: var(--color-primary-700-1447e6);
-}
-
 /* ============================================
    PAGE HEADER - inner-page banner (About, Services, Products, Contact)
 ============================================ */
