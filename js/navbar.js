@@ -23,6 +23,7 @@ function initializeNavbar() {
     });
 
     updateNavbarScrolledState();
+    updateActiveNavLink();
 }
 
 function updateNavbarScrolledState() {

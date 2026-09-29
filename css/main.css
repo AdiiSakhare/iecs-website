@@ -7,9 +7,9 @@ body {
     line-height: var(--lineHeight-normal-1-6);
 }
 
-/* Navbar - transparent over the hero, glassmorphic once scrolled. No
-   auto-hide: the navbar always stays put, only its background/text
-   color transition based on scroll position. */
+/* Navbar - transparent over the hero/page-header on load, 70% translucent
+   white with blur once scrolled. No auto-hide: stays put, only its
+   background/text/logo transition based on scroll position. */
 .navbar {
     position: fixed;
     top: 0;
@@ -21,12 +21,12 @@ body {
     -webkit-backdrop-filter: none;
     border-bottom: 1px solid transparent;
     z-index: var(--z-fixed-300);
-    transition: background 0.5s ease, backdrop-filter 0.5s ease,
-                border-color 0.5s ease;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease,
+                border-color 0.4s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom-color: rgba(0, 0, 0, 0.08);
@@ -39,6 +39,38 @@ body {
         -webkit-backdrop-filter: none;
         border-bottom-color: var(--border);
     }
+}
+
+/* Inner pages (About/Services/Products/Contact) have a light page-header,
+   not a dark hero photo, under the navbar - so they skip the transparent+
+   white top state entirely and start translucent/dark like .scrolled. */
+body:not(.home) .navbar {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+body:not(.home) .navbar-menu a {
+    color: var(--foreground);
+    text-shadow: none;
+}
+
+body:not(.home) .navbar-menu a:hover {
+    color: var(--primary);
+}
+
+body:not(.home) .navbar-menu a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+body:not(.home) .navbar-logo-white {
+    display: none;
+}
+
+body:not(.home) .navbar-logo-dark {
+    display: block;
 }
 
 .navbar-content {
@@ -60,7 +92,18 @@ body {
 .navbar-logo img {
     height: 100%;
     width: auto;
-    transition: filter 0.5s ease;
+}
+
+.navbar-logo-dark {
+    display: none;
+}
+
+.navbar.scrolled .navbar-logo-white {
+    display: none;
+}
+
+.navbar.scrolled .navbar-logo-dark {
+    display: block;
 }
 
 .navbar-menu {
@@ -71,44 +114,38 @@ body {
 }
 
 .navbar-menu a {
-    color: var(--foreground);
+    color: var(--color-white-ffffff);
     font-weight: 500;
-    transition: color var(--transition-base-250ms);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    transition: color var(--transition-base-250ms), text-shadow var(--transition-base-250ms);
 }
 
 .navbar-menu a:hover {
+    color: var(--primary-subtle);
+}
+
+.navbar.scrolled .navbar-menu a {
+    color: var(--foreground);
+    text-shadow: none;
+}
+
+.navbar.scrolled .navbar-menu a:hover {
     color: var(--primary);
 }
 
 .navbar-menu a.active {
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
+    color: var(--color-white-ffffff);
+    border-bottom: 2px solid var(--color-white-ffffff);
     padding-bottom: var(--space-4px);
 }
 
-/* Transparent state (top of page, over the hero photo): logo and links
-   flip to white for contrast. Glassmorphic state (.scrolled) uses the
-   default dark-on-light colors above. */
-.navbar:not(.scrolled) .navbar-logo img {
-    filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
-}
-
-.navbar:not(.scrolled) .navbar-menu a {
-    color: var(--color-white-ffffff);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-}
-
-.navbar:not(.scrolled) .navbar-menu a:hover {
-    color: var(--primary-subtle);
-}
-
-.navbar:not(.scrolled) .navbar-menu a.active {
-    color: var(--color-white-ffffff);
-    border-bottom-color: var(--color-white-ffffff);
+.navbar.scrolled .navbar-menu a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
 }
 
 /* Main Content - no top offset: hero fills the full viewport and sits
-   behind the fixed transparent navbar (see .hero-bg / .navbar above). */
+   behind the fixed translucent navbar (see .hero-bg / .navbar above). */
 
 /* Footer */
 .footer {
