@@ -398,37 +398,43 @@ body:not(.home) .navbar-toggle span {
    FOOTER LOGO
 ============================================ */
 .footer-brand img {
-    height: 36px;
-    margin-bottom: var(--space-16px);
-    background: var(--color-white-ffffff);
-    padding: var(--space-4px) var(--space-8px);
-    border-radius: var(--radius-input-8px);
+    height: 44px;
+    width: auto;
+    margin-bottom: var(--space-24px);
 }
 
 .footer-brand p {
-    max-width: 32ch;
+    max-width: 36ch;
 }
 
 .footer-social {
     display: flex;
     gap: var(--space-16px);
-    margin-top: var(--space-16px);
+    margin-top: var(--space-24px);
 }
 
 .footer-social a {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all var(--transition-base-250ms);
 }
 
+.footer-social a svg {
+    width: 18px;
+    height: 18px;
+}
+
 .footer-social a:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--color-white-ffffff);
+    border-color: var(--color-white-ffffff);
+    color: var(--color-primary-700-1447e6);
 }
 
 /* ============================================
