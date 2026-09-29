@@ -23,23 +23,21 @@
 .navbar-toggle span {
     width: 22px;
     height: 2px;
-    background: var(--foreground);
-    border-radius: 2px;
-    transition: transform var(--transition-base-250ms), opacity var(--transition-base-250ms),
-                background var(--transition-base-250ms);
-}
-
-.navbar:not(.scrolled) .navbar-toggle span {
     background: var(--color-white-ffffff);
+    border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    transition: transform var(--transition-base-250ms), opacity var(--transition-base-250ms),
+                background var(--transition-base-250ms), box-shadow var(--transition-base-250ms);
 }
 
-/* Once the mobile dropdown is open, the toggle sits above the (always
-   opaque) panel, so its icon needs to stay dark too. The toggle button
-   itself never gets an .active class - .navbar-menu does, and the toggle
-   follows it in the DOM, so the sibling combinator picks this up. */
-.navbar:not(.scrolled) .navbar-menu.active ~ .navbar-toggle span {
+.navbar.scrolled .navbar-toggle span {
     background: var(--foreground);
+    box-shadow: none;
+}
+
+body:not(.home) .navbar-toggle span {
+    background: var(--foreground);
+    box-shadow: none;
 }
 
 @media (max-width: 900px) {
@@ -70,19 +68,20 @@
         display: flex;
     }
 
-    /* The mobile dropdown panel is always opaque white regardless of the
-       navbar's transparent/glassmorphic scroll state, so its links must
-       always stay dark - otherwise white nav-link text (from the
-       transparent-navbar override) would vanish against it. */
-    .navbar:not(.scrolled) .navbar-menu.active a {
+    /* The mobile dropdown panel is always opaque regardless of the navbar's
+       transparent/glassmorphic scroll state, so its links must always stay
+       dark - otherwise white nav-link text (from the transparent-navbar
+       default) would vanish against it. */
+    .navbar-menu.active a {
         color: var(--foreground);
+        text-shadow: none;
     }
 
-    .navbar:not(.scrolled) .navbar-menu.active a:hover {
+    .navbar-menu.active a:hover {
         color: var(--primary);
     }
 
-    .navbar:not(.scrolled) .navbar-menu.active a.active {
+    .navbar-menu.active a.active {
         color: var(--primary);
         border-bottom-color: var(--primary);
     }
@@ -93,7 +92,7 @@
 ============================================ */
 .hero {
     position: relative;
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,13 +107,6 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
-}
-
-.hero-scrim {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(180deg, rgba(22, 36, 86, 0.55) 0%, rgba(22, 36, 86, 0.72) 100%);
 }
 
 .hero .container.hero-content {
@@ -198,7 +190,6 @@
 
 @media (max-width: 900px) {
     .hero {
-        min-height: calc(100dvh - 80px);
         padding: var(--space-48px) 0;
     }
 
@@ -446,7 +437,8 @@
 .page-header {
     position: relative;
     padding: calc(80px + var(--space-64px)) 0 var(--space-64px);
-    background: linear-gradient(135deg, var(--foreground) 0%, var(--color-primary-900-1c398e) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                url('../assets/images/hero/other-pages-hero-img.jpg') center / cover no-repeat;
     text-align: center;
 }
 
@@ -470,7 +462,7 @@
 }
 
 .page-header p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     max-width: 56ch;
     margin: var(--space-16px) auto 0;
 }
