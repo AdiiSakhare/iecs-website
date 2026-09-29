@@ -326,6 +326,8 @@ body:not(.home) .navbar-toggle span {
 ============================================ */
 .contact-section {
     text-align: center;
+    background: var(--color-white-ffffff);
+    color: var(--color-neutral-900-18181b);
 }
 
 .contact-section .section-title {
@@ -339,11 +341,11 @@ body:not(.home) .navbar-toggle span {
 }
 
 .contact-section-header h2 {
-    color: var(--color-white-ffffff);
+    color: var(--color-neutral-900-18181b);
 }
 
 .contact-section-header p {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--color-neutral-600-52525c);
     max-width: 50ch;
     margin: var(--space-16px) auto 0;
 }
@@ -353,8 +355,8 @@ body:not(.home) .navbar-toggle span {
 }
 
 .contact-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--color-white-ffffff);
+    border: 1px solid var(--border);
     border-radius: var(--radius-card-12px);
     padding: var(--space-32px) var(--space-24px);
     text-align: center;
@@ -362,7 +364,8 @@ body:not(.home) .navbar-toggle span {
 }
 
 .contact-card:hover {
-    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    box-shadow: 0 8px 24px rgba(43, 127, 255, 0.12);
     transform: translateY(-4px);
 }
 
@@ -373,12 +376,12 @@ body:not(.home) .navbar-toggle span {
 }
 
 .contact-card h3 {
-    color: var(--color-white-ffffff);
+    color: var(--color-neutral-900-18181b);
     margin-bottom: var(--space-8px);
 }
 
 .contact-card p {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--color-neutral-600-52525c);
     margin: 0;
 }
 
@@ -390,7 +393,7 @@ body:not(.home) .navbar-toggle span {
 
 .contact-card p a:hover,
 .contact-card p a:focus-visible {
-    color: var(--color-white-ffffff);
+    color: var(--primary-hover);
     text-decoration: underline;
 }
 
