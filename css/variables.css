@@ -11,17 +11,17 @@
     /* ============================================
        PRIMARY (Brand Blue/Indigo - per updated client styleguide)
     ============================================ */
-    --color-primary-50-f0f7ff: #f0f7ff;
-    --color-primary-100-dbedff: #dbedff;
-    --color-primary-200-b8dbff: #b8dbff;
-    --color-primary-300-85c2ff: #85c2ff;
-    --color-primary-400-52a8ff: #52a8ff;
-    --color-primary-500-1e90ff: #1e90ff;
-    --color-primary-600-0078f0: #0078f0;
-    --color-primary-700-0563c2: #0563c2;
-    --color-primary-800-084f96: #084f96;
-    --color-primary-900-093d71: #093d71;
-    --color-primary-950-082645: #082645;
+    --color-primary-50-eff6ff: #eff6ff;
+    --color-primary-100-dbeafe: #dbeafe;
+    --color-primary-200-bedbff: #bedbff;
+    --color-primary-300-8ec5ff: #8ec5ff;
+    --color-primary-400-51a2ff: #51a2ff;
+    --color-primary-500-2b7fff: #2b7fff;
+    --color-primary-600-155dfc: #155dfc;
+    --color-primary-700-1447e6: #1447e6;
+    --color-primary-800-193cb8: #193cb8;
+    --color-primary-900-1c398e: #1c398e;
+    --color-primary-950-162456: #162456;
 
     /* ============================================
        NEUTRAL (Grays)
@@ -86,17 +86,17 @@
     /* ============================================
        SEMANTIC TOKENS (map raw scale -> purpose)
     ============================================ */
-    --foreground: var(--color-primary-950-082645);
+    --foreground: var(--color-primary-950-162456);
     --muted-foreground: var(--color-neutral-500-71717b);
     --disabled-foreground: var(--color-neutral-300-d4d4d8);
     --border: var(--color-neutral-200-e4e4e7);
     --background: var(--color-white-ffffff);
     --muted-bg: var(--color-neutral-50-fafafa);
 
-    --primary: var(--color-primary-500-1e90ff);
-    --primary-hover: var(--color-primary-600-0078f0);
-    --primary-active: var(--color-primary-700-0563c2);
-    --primary-subtle: var(--color-primary-50-f0f7ff);
+    --primary: var(--color-primary-500-2b7fff);
+    --primary-hover: var(--color-primary-600-155dfc);
+    --primary-active: var(--color-primary-700-1447e6);
+    --primary-subtle: var(--color-primary-50-eff6ff);
 
     --error: var(--color-red-500-fb2c36);
     --success: var(--color-green-500-00c951);

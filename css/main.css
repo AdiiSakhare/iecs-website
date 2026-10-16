@@ -127,12 +127,12 @@ body {
     background: linear-gradient(
         180deg,
         var(--color-white-ffffff) 0%,
-        var(--color-primary-100-dbedff) 9%,
-        var(--color-primary-300-85c2ff) 21%,
-        var(--color-primary-500-1e90ff) 33%,
-        var(--color-primary-700-0563c2) 46%,
-        var(--color-primary-900-093d71) 66%,
-        var(--color-primary-950-082645) 100%
+        var(--color-primary-100-dbeafe) 9%,
+        var(--color-primary-300-8ec5ff) 21%,
+        var(--color-primary-500-2b7fff) 33%,
+        var(--color-primary-700-1447e6) 46%,
+        var(--color-primary-900-1c398e) 66%,
+        var(--color-primary-950-162456) 100%
     );
 }
 

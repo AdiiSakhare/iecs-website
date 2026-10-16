@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const partnerCarousel = document.getElementById('partner-carousel');
     if (partnerCarousel) {
         new Carousel('partner-carousel', {
-            speed: 40,
+            speed: 20,
             direction: 'left',
             pauseOnHover: true
         });
